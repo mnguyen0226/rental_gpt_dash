@@ -65,6 +65,14 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
 - Price Distribution: Interactive histograms or KDE plots for price where users can filter based on number of bedrooms, bathrooms, or location.
 - Feature Correlation: Heatmaps that update based on selected features to show correlations dynamically.
 - Interactive Table: Display a searchable and filterable table of listings where users can sort by different features like price, number of bedrooms, or interest level.
+  - Filtered by listing...
+- Design:
+  - Static + Dynamic: https://dash-molstar.everburstsun.net/drugs
+  - Prediction: https://dash-molstar.everburstsun.net/drugs
+  - ChatGPT: https://biomedical.dev6.rightinformation.com/genomic-analysis with listing
+- Dalle is possible: As we just need to have a pre-defined prompt and allow user to choose room number... then generate image.
+- All renthop image is online so we can do filtering
+- ChatGPT for listing, theres a button to "List top 5" to do api call making prediction on number of room... then filter.
 
 ### Phase 5. Real-time Prediction (data, image) with Flask [UI]
 - **Model 1**: Based on the tabular input of the user (without extracted features from image), can we predict the interest level. 
@@ -84,29 +92,24 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
   - Classical ML
   - Dataset with images only
 
-### Phase 6. Image Generation [UI + UX]
-- If have time, may be develop from scratch - diffusion model.
-- Initially: has a Q/A > generate images (based on the info we learn) - Model 2
-- ChatBox functionality (model)
-- **Model 5**: Based on the input data, can we generate the image of the room?
-  - Fine-tune Deep Learning
-  - Customer: Agent
-
-### Phase 7. Chatbot Development
-- **Model 6**: Usage of ChatGPT 
+### Phase 6. Chatbot Development
+- **Model 5**: Usage of ChatGPT 
   - Customer: Renter
   - Customer service bot to answer the FAQs about the NYC rental market using the dataset as knowledge base and analysis.
   - Hard: from the chat, provide the listing of the relevant property to select?
     - https://www.youtube.com/watch?v=EE1Y2enHrcU
     - https://www.youtube.com/watch?v=4qNwoAAfnk4&t=17s
+    - https://github.com/plotly/all-in-ai-demo-app
+    - Fine-tune: https://platform.openai.com/docs/guides/fine-tuning/use-a-fine-tuned-model
+    - https://www.youtube.com/watch?v=bTYL-lFM22k
 
-### Phase 8. Mobile Development [UI + UX]
+### Phase 7. Mobile Development [UI + UX]
 - Task 1: Upload images and make prediction (help buyer evaluate the house).
 - Task 2: Image generation based on input (help client the house)
 
-### Phase 9. PyTest
+### Phase 8. PyTest
 
-### Phase 10. Report & Presentation
+### Phase 9. Report & Presentation
 
 ## Architecture
 
