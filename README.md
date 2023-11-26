@@ -50,27 +50,50 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
   - Yolo
   - Classical ML
   - Dataset with images only
+- **Model 3**: Based on the tabular input of the user (without extracted features from image), can we predict the price. 
+  - Customer: Agent + Renter
+  - Classical ML.
+- **Model 4**: Based on the tabular input of the user and the image, can we predict the price.
+  - Customer: Agent
+  - Yolo
+  - Classical ML
+  - Dataset with images only
 
 ### Phase 4. Dash Visualization Development [UI + ANALYSIS]
-- Dataset analysis
-- What's the possible input-output interaction???
+- Dataset analysis, convert all to plotly.
+- Map Visualization: Use dash-leaflet or plotly.express to plot rental listings on a map. Users could filter by price range, number of bedrooms/bathrooms, or interest level.
+- Price Distribution: Interactive histograms or KDE plots for price where users can filter based on number of bedrooms, bathrooms, or location.
+- Feature Correlation: Heatmaps that update based on selected features to show correlations dynamically.
+- Interactive Table: Display a searchable and filterable table of listings where users can sort by different features like price, number of bedrooms, or interest level.
 
 ### Phase 5. Real-time Prediction (data, image) with Flask [UI]
-- Task 1: Input feature > let stakeholder know if the people might be interested in such features
-- Task 2: Input image > let stakeholder knows if the users is interested or not
-- **Question: Why do we need to store the database in the first place? What are we storing though?**
-  - Maybe to retrain the model? (new tab for new dataset to be added).
+- **Model 1**: Based on the tabular input of the user (without extracted features from image), can we predict the interest level. 
+  - Customer: Agent
+  - Classical ML.
+- **Model 2**: Based on the tabular input of the user and the image, can we predict the interest level.
+  - Customer: Agent
+  - Yolo
+  - Classical ML
+  - Dataset with images only
+- **Model 3**: Based on the tabular input of the user (without extracted features from image), can we predict the price. 
+  - Customer: Agent + Renter
+  - Classical ML.
+- **Model 4**: Based on the tabular input of the user and the image, can we predict the price.
+  - Customer: Agent
+  - Yolo
+  - Classical ML
+  - Dataset with images only
 
 ### Phase 6. Image Generation [UI + UX]
 - If have time, may be develop from scratch - diffusion model.
 - Initially: has a Q/A > generate images (based on the info we learn) - Model 2
 - ChatBox functionality (model)
-- **Model 3**: Based on the input data, can we generate the image of the room?
+- **Model 5**: Based on the input data, can we generate the image of the room?
   - Fine-tune Deep Learning
   - Customer: Agent
 
 ### Phase 7. Chatbot Development
-- **Model 4**: Usage of ChatGPT 
+- **Model 6**: Usage of ChatGPT 
   - Customer: Renter
   - Customer service bot to answer the FAQs about the NYC rental market using the dataset as knowledge base and analysis.
   - Hard: from the chat, provide the listing of the relevant property to select?
