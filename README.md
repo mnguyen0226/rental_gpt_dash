@@ -2,7 +2,6 @@
 A software to predict how popular an apartment retal listing based onthe listing content like text description, photos, number of bedrooms, price,.... The data is provided from renthop.com, an apartment listing site with the apartments are located in New York City. Specifically, for a listing_id, we want to know whether the customer has a `low`, `medium`, or `high` interest.
 
 Research Questions:
-- 1. Data Analysis (DONE)
 - 2. Model 1: Based on the tabular input of the user (without extracted features from image), can we predict the interest level. 
   - Customer: Agent
   - Classical ML.
@@ -32,15 +31,25 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
 
 ## Development Phases
 
-### Phase 1. EDA [ANALYSIS]
+### Phase 1. EDA [ANALYSIS] - DONE
 - Explore the dataset, reveal underlying information by plotting static plots for the following feature type, and preprocess the dataset.
 
 
-### Phase 2. Image Feature Extraction + Re-train [ANALYSIS]
-- Dataset analysis (pretrained model with PyTorch).
+### Phase 2. Data Processing [ANALYSIS] - DONE
+- Data preprocessing with Pretrained model
+  - Sentimental Extraction.
+  - Feature Extraction
+  - Image Feature Extraction
 
-### Phase 3. ML Modeling [ANALYSIS]
-- Classical ML modeling.
+### Phase 3. ML Modeling [ANALYSIS] - DONE
+- **Model 1**: Based on the tabular input of the user (without extracted features from image), can we predict the interest level. 
+  - Customer: Agent
+  - Classical ML.
+- **Model 2**: Based on the tabular input of the user and the image, can we predict the interest level.
+  - Customer: Agent
+  - Yolo
+  - Classical ML
+  - Dataset with images only
 
 ### Phase 4. Dash Visualization Development [UI + ANALYSIS]
 - Dataset analysis
@@ -52,16 +61,29 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
 - **Question: Why do we need to store the database in the first place? What are we storing though?**
   - Maybe to retrain the model? (new tab for new dataset to be added).
 
-### Phase 6. ChatGPT Image Generation Integration [UI + UX]
+### Phase 6. Image Generation [UI + UX]
 - If have time, may be develop from scratch - diffusion model.
 - Initially: has a Q/A > generate images (based on the info we learn) - Model 2
 - ChatBox functionality (model)
+- **Model 3**: Based on the input data, can we generate the image of the room?
+  - Fine-tune Deep Learning
+  - Customer: Agent
 
-### Phase 7. Mobile Development [UI + UX]
+### Phase 7. Chatbot Development
+- **Model 4**: Usage of ChatGPT 
+  - Customer: Renter
+  - Customer service bot to answer the FAQs about the NYC rental market using the dataset as knowledge base and analysis.
+  - Hard: from the chat, provide the listing of the relevant property to select?
+    - https://www.youtube.com/watch?v=EE1Y2enHrcU
+    - https://www.youtube.com/watch?v=4qNwoAAfnk4&t=17s
+
+### Phase 8. Mobile Development [UI + UX]
 - Task 1: Upload images and make prediction (help buyer evaluate the house).
 - Task 2: Image generation based on input (help client the house)
 
-### Phase 8. PyTest
+### Phase 9. PyTest
+
+### Phase 10. Report & Presentation
 
 ## Architecture
 
