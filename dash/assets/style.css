@@ -6,7 +6,7 @@
     bottom: 0;
     width: 5rem;
     padding: 2rem 1rem;
-    background-color: #cbd3dd;
+    background-color: #082446;
     z-index: 1050;
     transition: width 0.1s ease-in-out;
   }
@@ -33,13 +33,6 @@
     visibility: hidden;
     opacity: 1;
     transition: opacity 0.1s ease-in-out;
-  }
-  
-  /* when the sidebar is hovered, reveal the labels */
-  .sidebar:hover .nav-link span {
-    visibility: visible;
-    opacity: 1;
-    color: black;
   }
   
   /* container for the sidebar header. make sure the contents don't wrap when
@@ -72,3 +65,49 @@
     margin-right: 2rem;
     padding: 2rem 1rem;
   }
+
+  /* Adjust the margin when the sidebar is not hovered */
+  .content {
+    transition: margin-left .1s;
+    padding: 1rem 1rem;
+  }
+
+  /* Increase the margin-left of the content when the sidebar is hovered */
+  .sidebar:hover ~ .content {
+    margin-left: 18rem;
+  }
+
+/* Default non-selected nav link styles */
+.sidebar .nav-link {
+  background-color: #082446; /* Dark background for non-selected */
+  color: #ffffff; /* White text for non-selected */
+}
+
+/* Hover and focus styles for non-selected nav links */
+.sidebar .nav-link:hover, .sidebar .nav-link:focus {
+  background-color: #ffffff; /* White background on hover/focus */
+  color: #082446; /* Dark text on hover/focus */
+}
+
+/* Active (selected) nav link styles */
+.sidebar .nav-link.active, .sidebar .nav-link.active:focus {
+  background-color: #ffffff; /* White background for selected */
+  color: #082446; /* Dark text for selected */
+}
+
+/* Ensure icons and text inside nav links follow the same color rules */
+.sidebar .nav-link i, .sidebar .nav-link span {
+  color: inherit; /* This ensures the text color is the same as the .nav-link */
+}
+
+/* For better UX, ensure that the hover/focus effects apply to entire nav-link content */
+.sidebar .nav-link:hover i, .sidebar .nav-link:hover span,
+.sidebar .nav-link:focus i, .sidebar .nav-link:focus span {
+  color: inherit; /* Maintain the same color on hover/focus */
+}
+
+/* when the sidebar is hovered, reveal the labels */
+.sidebar:hover .nav-link span {
+  visibility: visible;
+  opacity: 1;
+}
