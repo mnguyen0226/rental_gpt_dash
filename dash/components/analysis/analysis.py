@@ -12,6 +12,7 @@ from components.analysis.line_plot import line_plot_info
 from components.analysis.bar_plot_1 import bar_plot_1_info
 from components.analysis.bar_plot_2 import bar_plot_2_info
 from components.analysis.count_plot_1 import count_plot_1_info
+from components.analysis.count_plot_2 import count_plot_2_info
 
 
 #######################################
@@ -290,7 +291,7 @@ def render_tab_1(tab_choice):
     if tab_choice == "analysis_count_1":
         return count_plot_1_info()
     if tab_choice == "analysis_count_2":
-        return (html.P("analysis_count_2"), html.P("analysis_count_2"))
+        return count_plot_2_info()
     if tab_choice == "analysis_count_3":
         return (html.P("analysis_count_3"), html.P("analysis_count_3"))
     if tab_choice == "analysis_count_4":
