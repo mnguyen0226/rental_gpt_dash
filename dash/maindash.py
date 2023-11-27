@@ -7,4 +7,5 @@ my_app = dash.Dash(
     suppress_callback_exceptions=True,
     external_stylesheets=[dbc.themes.MATERIA, dbc.icons.FONT_AWESOME],
 )
+my_app.title = "RentalGPT"
 server = my_app.server

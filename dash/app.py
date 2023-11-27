@@ -89,9 +89,9 @@ sidebar = html.Div(
                 dbc.NavLink(
                     [
                         html.I(className="fas fa-solid fa-eye me-2"),
-                        html.Span("Apartment Vision"),
+                        html.Span("Generative Apartment"),
                     ],
-                    href="/apartment_vision",
+                    href="/gen_apartment",
                     active="exact",
                 ),
                 dbc.NavLink(
@@ -149,7 +149,7 @@ def render_page_content(pathname):
         pass
     elif pathname == "/price_prediction":
         pass
-    elif pathname == "/apartment_vision":
+    elif pathname == "/gen_apartment":
         pass
     elif pathname == "/virtual_assistant":
         pass
