@@ -44,6 +44,6 @@ sns.countplot(
     data=df_filtered,
 )
 plt.title("Bar Chart of Interest Level in Year")
-plt.xlabel("Hour")
+plt.xlabel("Year")
 plt.ylabel("Interest Level Counts")
 plt.show()
