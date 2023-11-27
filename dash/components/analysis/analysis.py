@@ -9,7 +9,7 @@ import dash_bootstrap_components as dbc
 # file imports
 from maindash import my_app
 from components.analysis.line_plot import line_plot_info
-
+from components.analysis.bar_plot_1 import bar_plot_1_info
 
 #######################################
 # Layout
@@ -281,7 +281,7 @@ def render_tab_1(tab_choice):
     if tab_choice == "analysis_line":
         return line_plot_info()
     if tab_choice == "analysis_bar_1":
-        return (html.P("analysis_bar_1"), html.P("analysis_bar_1"))
+        return bar_plot_1_info()
     if tab_choice == "analysis_bar_2":
         return (html.P("analysis_bar_2"), html.P("analysis_bar_2"))
     if tab_choice == "analysis_count_2":
