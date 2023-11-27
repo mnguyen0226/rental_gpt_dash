@@ -13,6 +13,7 @@ from dash import State
 from maindash import my_app
 from utils.file_operation import read_file_as_str
 
+
 def line_plot_layout():
     layout = html.Div(
         [
@@ -30,7 +31,10 @@ def line_plot_layout():
 
 @my_app.callback(
     Output("analysis_line_price_graph", "figure"),
-    [Input("analysis_line_plot_date", "start_date"), Input("analysis_line_plot_date", "end_date")],
+    [
+        Input("analysis_line_plot_date", "start_date"),
+        Input("analysis_line_plot_date", "end_date"),
+    ],
 )
 def update_graph(start_date, end_date):
     # convert the date strings to datetime objects
@@ -82,39 +86,42 @@ def line_plot_content():
 
 
 def line_plot_code():
-    return html.Div([
-        html.H3("💻 Source Code"),
-        html.Br(),
-        html.Div(
-            [
-                dbc.Button(
-                    "View Code",
-                    id="analysis_line_plot_collapse_button",
-                    className="mb-3",
-                    color="primary",
-                    n_clicks=0,
-                ),
-                dbc.Collapse(
-                    dcc.Markdown(
-                        children=read_file_as_str(
-                            "./utils/markdown/analysis/line_plot.md"
-                        ),
-                        mathjax=True,
+    return html.Div(
+        [
+            html.H3("💻 Source Code"),
+            html.Br(),
+            html.Div(
+                [
+                    dbc.Button(
+                        "View Code",
+                        id="analysis_line_plot_collapse_button",
+                        className="mb-3",
+                        color="primary",
+                        n_clicks=0,
                     ),
-                    id="analysis_line_plot_collapse",
-                    is_open=False,
-                ),
-            ]
-        ),
-        dbc.Button(
-            "Download Code",
-            color="success",
-            className="me-1",
-            id="analysis_line_plot_download_btn",
-        ),
-        dcc.Download(id="analysis_line_plot_download"),
-    ])
-    
+                    dbc.Collapse(
+                        dcc.Markdown(
+                            children=read_file_as_str(
+                                "./utils/markdown/analysis/line_plot.md"
+                            ),
+                            mathjax=True,
+                        ),
+                        id="analysis_line_plot_collapse",
+                        is_open=False,
+                    ),
+                ]
+            ),
+            dbc.Button(
+                "Download Code",
+                color="success",
+                className="me-1",
+                id="analysis_line_plot_download_btn",
+            ),
+            dcc.Download(id="analysis_line_plot_download"),
+        ]
+    )
+
+
 @my_app.callback(
     Output("analysis_line_plot_download", "data"),
     Input("analysis_line_plot_download_btn", "n_clicks"),
@@ -123,8 +130,10 @@ def line_plot_code():
 def func(n_clicks):
     return dcc.send_file("./utils/download_codes/analysis/line_plot_code.py")
 
+
 def line_plot_info():
     return (line_plot_content(), line_plot_layout(), line_plot_code())
+
 
 @my_app.callback(
     Output("analysis_line_plot_collapse", "is_open"),

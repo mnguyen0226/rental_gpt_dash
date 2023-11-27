@@ -25,20 +25,19 @@ df_filtered = df[df["price"] <= upper_bound]
 bathroom_counts = df_filtered["bathrooms"].value_counts().sort_index()
 
 # create a Plotly bar chart
-fig = px.bar(x=bathroom_counts.index, y=bathroom_counts.values, labels={'x': 'Number of Bathrooms', 'y': 'Number of Occurrence'})
+fig = px.bar(
+    x=bathroom_counts.index,
+    y=bathroom_counts.values,
+    labels={"x": "Number of Bathrooms", "y": "Number of Occurrence"},
+)
 fig.update_layout(
     title_text="Bar Chart of Number of Bathrooms Counts",
-    title_x=0.5, 
+    title_x=0.5,
 )
 
+
 def bar_plot_2_layout():
-    layout = html.Div(
-        [
-            dcc.Graph(
-                figure=fig
-            )
-        ]
-    )
+    layout = html.Div([dcc.Graph(figure=fig)])
     return layout
 
 
@@ -58,39 +57,42 @@ def bar_plot_2_content():
 
 
 def bar_plot_2_code():
-    return html.Div([
-        html.H3("💻 Source Code"),
-        html.Br(),
-        html.Div(
-            [
-                dbc.Button(
-                    "View Code",
-                    id="analysis_bar_plot_2_collapse_button",
-                    className="mb-3",
-                    color="primary",
-                    n_clicks=0,
-                ),
-                dbc.Collapse(
-                    dcc.Markdown(
-                        children=read_file_as_str(
-                            "./utils/markdown/analysis/bar_plot_2.md"
-                        ),
-                        mathjax=True,
+    return html.Div(
+        [
+            html.H3("💻 Source Code"),
+            html.Br(),
+            html.Div(
+                [
+                    dbc.Button(
+                        "View Code",
+                        id="analysis_bar_plot_2_collapse_button",
+                        className="mb-3",
+                        color="primary",
+                        n_clicks=0,
                     ),
-                    id="analysis_bar_plot_2_collapse",
-                    is_open=False,
-                ),
-            ]
-        ),
-        dbc.Button(
-            "Download Code",
-            color="success",
-            className="me-1",
-            id="analysis_bar_plot_2_download_btn",
-        ),
-        dcc.Download(id="analysis_bar_plot_2_download"),
-    ])
-    
+                    dbc.Collapse(
+                        dcc.Markdown(
+                            children=read_file_as_str(
+                                "./utils/markdown/analysis/bar_plot_2.md"
+                            ),
+                            mathjax=True,
+                        ),
+                        id="analysis_bar_plot_2_collapse",
+                        is_open=False,
+                    ),
+                ]
+            ),
+            dbc.Button(
+                "Download Code",
+                color="success",
+                className="me-1",
+                id="analysis_bar_plot_2_download_btn",
+            ),
+            dcc.Download(id="analysis_bar_plot_2_download"),
+        ]
+    )
+
+
 @my_app.callback(
     Output("analysis_bar_plot_2_download", "data"),
     Input("analysis_bar_plot_2_download_btn", "n_clicks"),
@@ -99,8 +101,10 @@ def bar_plot_2_code():
 def func(n_clicks):
     return dcc.send_file("./utils/download_codes/analysis/bar_plot_2_code.py")
 
+
 def bar_plot_2_info():
     return (bar_plot_2_content(), bar_plot_2_layout(), bar_plot_2_code())
+
 
 @my_app.callback(
     Output("analysis_bar_plot_2_collapse", "is_open"),

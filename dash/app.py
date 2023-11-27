@@ -57,7 +57,7 @@ sidebar = html.Div(
                 dbc.NavLink(
                     [
                         html.I(className="fas fa-solid fa-chart-simple me-2"),
-                        html.Span("Analysis"),
+                        html.Span("Data Analysis"),
                     ],
                     href="/analysis",
                     active="exact",
@@ -65,7 +65,7 @@ sidebar = html.Div(
                 dbc.NavLink(
                     [
                         html.I(className="fas fa-solid fa-sliders me-2"),
-                        html.Span("Visualization"),
+                        html.Span("Data Visualization"),
                     ],
                     href="/visualization",
                     active="exact",

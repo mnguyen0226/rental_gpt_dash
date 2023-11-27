@@ -107,9 +107,12 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
 - Task 1: Upload images and make prediction (help buyer evaluate the house).
 - Task 2: Image generation based on input (help client the house)
 
-### Phase 8. PyTest
+### Phase 8. PyTest 
 
-### Phase 9. Report & Presentation
+### Phase 9. Deploy
+
+### Phase 10. Report & Presentation
+- Create a python file for EDA
 
 ## Architecture
 
