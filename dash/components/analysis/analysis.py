@@ -8,6 +8,7 @@ import dash_bootstrap_components as dbc
 
 # file imports
 from maindash import my_app
+from components.analysis.line_plot import line_plot_info
 
 
 #######################################
@@ -37,14 +38,14 @@ def analysis_layout():
                         },
                     ),
                     html.H1(
-                        "RentGPT",
+                        "Data Analysis",
                         style={
                             "position": "absolute",
                             "top": "80%",
                             "left": "50%",
-                            "transform": "translate(-45%, -50%)",
+                            "transform": "translate(-50%, -50%)",
                             "color": "white",
-                            "text-align": "left",
+                            "text-align": "center",
                             "width": "100%",
                         },
                     ),
@@ -209,7 +210,7 @@ def analysis_layout():
                                         tab_id="analysis_story_3",
                                     ),
                                     dbc.Tab(
-                                        label="Story Plot",
+                                        label="Story Plot 4",
                                         tab_id="analysis_story_4",
                                     ),
                                 ],
@@ -219,6 +220,8 @@ def analysis_layout():
                     ),
                 ],
             ),
+            html.Br(),
+            html.Br(),
             # content: analysis & plot
             html.Div(
                 style={"display": "flex"},
@@ -226,7 +229,7 @@ def analysis_layout():
                     html.Div(
                         style={
                             "width": "50%",
-                            "padding": "20px",
+                            "padding": "10px",
                         },
                         children=[
                             html.Div(id="analysis_tab_content_layout"),
@@ -235,7 +238,7 @@ def analysis_layout():
                     html.Div(
                         style={
                             "width": "50%",
-                            "padding": "20px",
+                            "padding": "10px",
                         },
                         children=[
                             html.Div(id="analysis_tab_plot_layout"),
@@ -243,6 +246,10 @@ def analysis_layout():
                     ),
                 ],
             ),
+            html.Br(),
+            html.Br(),
+            # download and view code
+            html.Div(id="analysis_code"),
         ]
     )
 
@@ -254,8 +261,11 @@ def analysis_layout():
 #######################################
 @my_app.callback(
     [
-        Output(component_id="analysis_tab_content_layout", component_property="children"),
+        Output(
+            component_id="analysis_tab_content_layout", component_property="children"
+        ),
         Output(component_id="analysis_tab_plot_layout", component_property="children"),
+        Output(component_id="analysis_code", component_property="children"),
     ],
     [Input(component_id="analysis_selected_tab", component_property="active_tab")],
 )
@@ -268,39 +278,75 @@ def render_tab_1(tab_choice):
     Returns:
         selected subtab's layout
     """
-    if tab_choice == "theory_tab":
-        return (html.P("theory_tab"), html.P("theory_tab"))
-    if tab_choice == "pg_tab":
-        return (html.P("pg_tab"), html.P("pg_tab"))
-    if tab_choice == "code_tab":
-        return (html.P("code_tab"), html.P("code_tab"))
-    if tab_choice == "theory_tab":
-        return (html.P("theory_tab"), html.P("theory_tab"))
-    if tab_choice == "pg_tab":
-        return (html.P("pg_tab"), html.P("pg_tab"))
-    if tab_choice == "code_tab":
-        return (html.P("code_tab"), html.P("code_tab"))
-    if tab_choice == "theory_tab":
-        return (html.P("theory_tab"), html.P("theory_tab"))
-    if tab_choice == "pg_tab":
-        return (html.P("pg_tab"), html.P("pg_tab"))
-    if tab_choice == "code_tab":
-        return (html.P("code_tab"), html.P("code_tab"))
-    if tab_choice == "theory_tab":
-        return (html.P("theory_tab"), html.P("theory_tab"))
-    if tab_choice == "pg_tab":
-        return (html.P("pg_tab"), html.P("pg_tab"))
-    if tab_choice == "code_tab":
-        return (html.P("code_tab"), html.P("code_tab"))
-    if tab_choice == "theory_tab":
-        return (html.P("theory_tab"), html.P("theory_tab"))
-    if tab_choice == "pg_tab":
-        return (html.P("pg_tab"), html.P("pg_tab"))
-    if tab_choice == "code_tab":
-        return (html.P("code_tab"), html.P("code_tab"))
-    if tab_choice == "theory_tab":
-        return (html.P("theory_tab"), html.P("theory_tab"))
-    if tab_choice == "pg_tab":
-        return (html.P("pg_tab"), html.P("pg_tab"))
-    if tab_choice == "code_tab":
-        return (html.P("code_tab"), html.P("code_tab"))
+    if tab_choice == "analysis_line":
+        return line_plot_info()
+    if tab_choice == "analysis_bar_1":
+        return (html.P("analysis_bar_1"), html.P("analysis_bar_1"))
+    if tab_choice == "analysis_bar_2":
+        return (html.P("analysis_bar_2"), html.P("analysis_bar_2"))
+    if tab_choice == "analysis_count_2":
+        return (html.P("analysis_count_2"), html.P("analysis_count_2"))
+    if tab_choice == "analysis_count_3":
+        return (html.P("analysis_count_3"), html.P("analysis_count_3"))
+    if tab_choice == "analysis_count_4":
+        return (html.P("analysis_count_4"), html.P("analysis_count_4"))
+    if tab_choice == "analysis_count_5":
+        return (html.P("analysis_count_5"), html.P("analysis_count_5"))
+    if tab_choice == "analysis_count_6":
+        return (html.P("analysis_count_6"), html.P("analysis_count_6"))
+    if tab_choice == "analysis_pie":
+        return (html.P("analysis_pie"), html.P("analysis_pie"))
+    if tab_choice == "analysis_dist":
+        return (html.P("analysis_dist"), html.P("analysis_dist"))
+    if tab_choice == "analysis_pair":
+        return (html.P("analysis_pair"), html.P("analysis_pair"))
+    if tab_choice == "analysis_heatmap":
+        return (html.P("analysis_heatmap"), html.P("analysis_heatmap"))
+    if tab_choice == "analysis_hist_kde":
+        return (html.P("analysis_hist_kde"), html.P("analysis_hist_kde"))
+    if tab_choice == "analysis_qq":
+        return (html.P("analysis_qq"), html.P("analysis_qq"))
+    if tab_choice == "analysis_kde":
+        return (html.P("analysis_kde"), html.P("analysis_kde"))
+    if tab_choice == "analysis_reg_1":
+        return (html.P("analysis_reg_1"), html.P("analysis_reg_1"))
+    if tab_choice == "analysis_reg_2":
+        return (html.P("analysis_reg_2"), html.P("analysis_reg_2"))
+    if tab_choice == "analysis_reg_3":
+        return (html.P("analysis_reg_3"), html.P("analysis_reg_3"))
+    if tab_choice == "analysis_area":
+        return (html.P("analysis_area"), html.P("analysis_area"))
+    if tab_choice == "analysis_violin":
+        return (html.P("analysis_violin"), html.P("analysis_violin"))
+    if tab_choice == "analysis_joint_1":
+        return (html.P("analysis_joint_1"), html.P("analysis_joint_1"))
+    if tab_choice == "analysis_joint_2":
+        return (html.P("analysis_joint_2"), html.P("analysis_joint_2"))
+    if tab_choice == "analysis_rug":
+        return (html.P("analysis_rug"), html.P("analysis_rug"))
+    if tab_choice == "analysis_3d":
+        return (html.P("analysis_3d"), html.P("analysis_3d"))
+    if tab_choice == "analysis_contour":
+        return (html.P("analysis_contour"), html.P("analysis_contour"))
+    if tab_choice == "analysis_3d_contour":
+        return (html.P("analysis_3d_contour"), html.P("analysis_3d_contour"))
+    if tab_choice == "analysis_cluster":
+        return (html.P("analysis_cluster"), html.P("analysis_cluster"))
+    if tab_choice == "analysis_hexbin":
+        return (html.P("analysis_hexbin"), html.P("analysis_hexbin"))
+    if tab_choice == "analysis_strip_1":
+        return (html.P("analysis_strip_1"), html.P("analysis_strip_1"))
+    if tab_choice == "analysis_strip_2":
+        return (html.P("analysis_strip_2"), html.P("analysis_strip_2"))
+    if tab_choice == "analysis_strip_3":
+        return (html.P("analysis_strip_3"), html.P("analysis_strip_3"))
+    if tab_choice == "analysis_swarm":
+        return (html.P("analysis_swarm"), html.P("analysis_swarm"))
+    if tab_choice == "analysis_story_1":
+        return (html.P("analysis_story_1"), html.P("analysis_story_1"))
+    if tab_choice == "analysis_story_2":
+        return (html.P("analysis_story_2"), html.P("analysis_story_2"))
+    if tab_choice == "analysis_story_3":
+        return (html.P("analysis_story_3"), html.P("analysis_story_3"))
+    if tab_choice == "analysis_story_4":
+        return (html.P("analysis_story_4"), html.P("analysis_story_4"))
