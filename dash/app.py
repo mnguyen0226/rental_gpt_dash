@@ -8,6 +8,8 @@ import dash_bootstrap_components as dbc
 
 # file imports
 from maindash import my_app
+from components.overview import overview
+from components.analysis import analysis
 
 #######################################
 # Initial Settings
@@ -37,7 +39,10 @@ sidebar = html.Div(
         dbc.Nav(
             [
                 dbc.NavLink(
-                    [html.I(className="fas fa-solid fa-star me-2"), html.Span("Overview")],
+                    [
+                        html.I(className="fas fa-solid fa-star me-2"),
+                        html.Span("Overview"),
+                    ],
                     href="/",
                     active="exact",
                 ),
@@ -137,7 +142,7 @@ def render_page_content(pathname):
     elif pathname == "/listing":
         pass
     elif pathname == "/analysis":
-        pass
+        return analysis.analysis_layout()
     elif pathname == "/visualization":
         pass
     elif pathname == "/interest_level_prediction":
