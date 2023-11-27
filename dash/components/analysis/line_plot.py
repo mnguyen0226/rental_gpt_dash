@@ -33,30 +33,29 @@ def line_plot_layout():
     [Input("analysis_line_plot_date", "start_date"), Input("analysis_line_plot_date", "end_date")],
 )
 def update_graph(start_date, end_date):
-    # Convert the date strings to datetime objects
+    # convert the date strings to datetime objects
     start_date = pd.to_datetime(start_date).date()
     end_date = pd.to_datetime(end_date).date()
 
-    # Read the data
+    # read the data
     url = "https://raw.githubusercontent.com/mnguyen0226/two_sigma_property_listing/main/data/train.json"
     df = pd.read_json(url)
 
-    # Outlier removal
+    # outlier removal
     upper_bound = np.percentile(df["price"].values, 99)
     df_filtered = df[df["price"] <= upper_bound]
 
-    # Create new date columns
+    # create new date columns
     df_filtered["date"] = pd.to_datetime(df_filtered["created"]).dt.date
 
-    # Filter data based on date range
+    # filter data based on date range
     df_filtered = df_filtered[
         (df_filtered["date"] >= start_date) & (df_filtered["date"] <= end_date)
     ]
 
-    # Group by date and take the average of the price
+    # group by date and take the average of the price
     df_grouped = df_filtered.groupby("date")["price"].mean().reset_index()
 
-    # Plotly express line plot with the aggregated data
     fig = px.line(
         df_grouped, x="date", y="price", title="Average Property Prices Over Time"
     )
