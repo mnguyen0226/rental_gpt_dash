@@ -20,6 +20,7 @@ from components.analysis.count_plot_6 import count_plot_6_info
 from components.analysis.pie_chart import pie_chart_info
 from components.analysis.dist_plot import dist_plot_info
 from components.analysis.pair_plot import pair_plot_info
+from components.analysis.heatmap import heatmap_info
 
 
 #######################################
@@ -314,7 +315,7 @@ def render_tab_1(tab_choice):
     if tab_choice == "analysis_pair":
         return pair_plot_info()
     if tab_choice == "analysis_heatmap":
-        return (html.P("analysis_heatmap"), html.P("analysis_heatmap"))
+        return heatmap_info()
     if tab_choice == "analysis_hist_kde":
         return (html.P("analysis_hist_kde"), html.P("analysis_hist_kde"))
     if tab_choice == "analysis_qq":
