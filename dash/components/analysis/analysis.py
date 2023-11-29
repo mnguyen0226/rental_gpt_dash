@@ -45,7 +45,7 @@ def analysis_layout():
                     html.Div(
                         [
                             html.Img(
-                                src="https://images.unsplash.com/photo-1534477675274-cd511de4be22?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                src="https://images.unsplash.com/photo-1614851099511-773084f6911d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                                 style={
                                     "width": "100%",
                                     "height": "auto",
@@ -54,7 +54,7 @@ def analysis_layout():
                             ),
                         ],
                         style={
-                            "height": "300px",
+                            "height": "200px",
                             "overflow": "hidden",
                             "position": "relative",
                         },
@@ -179,38 +179,6 @@ def analysis_layout():
                                         label="3D Contour Plot",
                                         tab_id="analysis_3d_contour",
                                     ),
-                                    dbc.Tab(
-                                        label="Strip Plot 1",
-                                        tab_id="analysis_strip_1",
-                                    ),
-                                    dbc.Tab(
-                                        label="Strip Plot 2",
-                                        tab_id="analysis_strip_2",
-                                    ),
-                                    dbc.Tab(
-                                        label="Strip Plot 3",
-                                        tab_id="analysis_strip_3",
-                                    ),
-                                    dbc.Tab(
-                                        label="Swarm Plot",
-                                        tab_id="analysis_swarm",
-                                    ),
-                                    dbc.Tab(
-                                        label="Sub-Plot 1",
-                                        tab_id="analysis_subplot_1",
-                                    ),
-                                    dbc.Tab(
-                                        label="Sub-Plot 2",
-                                        tab_id="analysis_subplot_2",
-                                    ),
-                                    dbc.Tab(
-                                        label="Sub-Plot 3",
-                                        tab_id="analysis_subplot_3",
-                                    ),
-                                    dbc.Tab(
-                                        label="Sub-Plot 4",
-                                        tab_id="analysis_subplot_4",
-                                    ),
                                 ],
                                 active_tab="analysis_line",
                             ),
@@ -322,19 +290,3 @@ def render_tab(tab_choice):
         return plot_3d_info()
     if tab_choice == "analysis_3d_contour":
         return plot_3d_contour_info()
-    if tab_choice == "analysis_strip_1":
-        return (html.P("analysis_strip_1"), html.P("analysis_strip_1"))
-    if tab_choice == "analysis_strip_2":
-        return (html.P("analysis_strip_2"), html.P("analysis_strip_2"))
-    if tab_choice == "analysis_strip_3":
-        return (html.P("analysis_strip_3"), html.P("analysis_strip_3"))
-    if tab_choice == "analysis_swarm":
-        return (html.P("analysis_swarm"), html.P("analysis_swarm"))
-    if tab_choice == "analysis_subplot_1":
-        return (html.P("analysis_subplot_1"), html.P("analysis_subplot_1"))
-    if tab_choice == "analysis_subplot_2":
-        return (html.P("analysis_subplot_2"), html.P("analysis_subplot_2"))
-    if tab_choice == "analysis_subplot_3":
-        return (html.P("analysis_subplot_3"), html.P("analysis_subplot_3"))
-    if tab_choice == "analysis_subplot_4":
-        return (html.P("analysis_subplot_4"), html.P("analysis_subplot_4"))
