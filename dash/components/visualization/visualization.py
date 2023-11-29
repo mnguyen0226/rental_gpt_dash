@@ -132,7 +132,7 @@ def visualization_layout():
     ],
     [Input(component_id="visualization_selected_tab", component_property="active_tab")],
 )
-def render_tab_1(tab_choice):
+def render_tab(tab_choice):
     """Renders the selected subtab's layout
 
     Args:
