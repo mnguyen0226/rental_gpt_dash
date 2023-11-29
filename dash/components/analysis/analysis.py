@@ -22,6 +22,7 @@ from components.analysis.dist_plot import dist_plot_info
 from components.analysis.pair_plot import pair_plot_info
 from components.analysis.heatmap import heatmap_info
 from components.analysis.qq_plot import qq_plot_info
+from components.analysis.reg_plot_1 import reg_plot_1_info
 
 
 #######################################
@@ -133,10 +134,6 @@ def analysis_layout():
                                     dbc.Tab(
                                         label="QQ Plot",
                                         tab_id="analysis_qq",
-                                    ),
-                                    dbc.Tab(
-                                        label="KDE Plot",
-                                        tab_id="analysis_kde",
                                     ),
                                     dbc.Tab(
                                         label="Reg Plot 1",
@@ -315,10 +312,8 @@ def render_tab(tab_choice):
         return heatmap_info()
     if tab_choice == "analysis_qq":
         return qq_plot_info()
-    if tab_choice == "analysis_kde":
-        return (html.P("analysis_kde"), html.P("analysis_kde"))
     if tab_choice == "analysis_reg_1":
-        return (html.P("analysis_reg_1"), html.P("analysis_reg_1"))
+        return reg_plot_1_info()
     if tab_choice == "analysis_reg_2":
         return (html.P("analysis_reg_2"), html.P("analysis_reg_2"))
     if tab_choice == "analysis_reg_3":
