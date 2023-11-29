@@ -25,6 +25,7 @@ from components.analysis.qq_plot import qq_plot_info
 from components.analysis.reg_plot_1 import reg_plot_1_info
 from components.analysis.reg_plot_2 import reg_plot_2_info
 from components.analysis.reg_plot_3 import reg_plot_3_info
+from components.analysis.area_plot import area_plot_info
 
 
 #######################################
@@ -321,7 +322,7 @@ def render_tab(tab_choice):
     if tab_choice == "analysis_reg_3":
         return reg_plot_3_info()
     if tab_choice == "analysis_area":
-        return (html.P("analysis_area"), html.P("analysis_area"))
+        return area_plot_info()
     if tab_choice == "analysis_violin":
         return (html.P("analysis_violin"), html.P("analysis_violin"))
     if tab_choice == "analysis_joint_1":
