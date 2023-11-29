@@ -21,6 +21,7 @@ from components.analysis.pie_chart import pie_chart_info
 from components.analysis.dist_plot import dist_plot_info
 from components.analysis.pair_plot import pair_plot_info
 from components.analysis.heatmap import heatmap_info
+from components.analysis.qq_plot import qq_plot_info
 
 
 #######################################
@@ -128,10 +129,6 @@ def analysis_layout():
                                     dbc.Tab(
                                         label="Heatmap",
                                         tab_id="analysis_heatmap",
-                                    ),
-                                    dbc.Tab(
-                                        label="Histogram KDE Plot",
-                                        tab_id="analysis_hist_kde",
                                     ),
                                     dbc.Tab(
                                         label="QQ Plot",
@@ -281,7 +278,7 @@ def analysis_layout():
     ],
     [Input(component_id="analysis_selected_tab", component_property="active_tab")],
 )
-def render_tab_1(tab_choice):
+def render_tab(tab_choice):
     """Renders the selected subtab's layout
 
     Args:
@@ -316,10 +313,8 @@ def render_tab_1(tab_choice):
         return pair_plot_info()
     if tab_choice == "analysis_heatmap":
         return heatmap_info()
-    if tab_choice == "analysis_hist_kde":
-        return (html.P("analysis_hist_kde"), html.P("analysis_hist_kde"))
     if tab_choice == "analysis_qq":
-        return (html.P("analysis_qq"), html.P("analysis_qq"))
+        return qq_plot_info()
     if tab_choice == "analysis_kde":
         return (html.P("analysis_kde"), html.P("analysis_kde"))
     if tab_choice == "analysis_reg_1":
