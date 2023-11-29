@@ -59,10 +59,10 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
   - Classical ML
   - Dataset with images only
 
-### Phase 4. Dash Visualization Development [UI + ANALYSIS]
+### Phase 4. Dash Visualization Development [UI + ANALYSIS] - DONE
 - **TODO** - DCC:
   - Check list
-  - Dropdown
+  - RadioItem
   - Loading
   - RangeSlider
   - Slider
@@ -121,6 +121,7 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
 ### Phase 8. PyTest 
 
 ### Phase 9. Deploy
+- Will the docerization and running will actually work as the ml is trained on different environment while the model is run on different environment?
 
 ### Phase 10. Report & Presentation
 - Create a python file for EDA
@@ -133,6 +134,8 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
 - Dalle is possible: As we just need to have a pre-defined prompt and allow user to choose room number... then generate image.
 - All renthop image is online so we can do filtering
 - ChatGPT for listing, theres a button to "List top 5" to do api call making prediction on number of room... then filter.
+- **Can you prepare a document that shows the steps on the deployment process through VT server instead of GCP?**
+- **Share to BlackRock**
 
 ## Architecture
 

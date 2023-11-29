@@ -11,6 +11,7 @@ from maindash import my_app
 from components.overview import overview
 from components.analysis import analysis
 from components.visualization import visualization
+from components.interest_level_prediction import interest_level_prediction
 
 #######################################
 # Initial Settings
@@ -147,7 +148,8 @@ def render_page_content(pathname):
     elif pathname == "/visualization":
         return visualization.visualization_layout()
     elif pathname == "/interest_level_prediction":
-        pass
+        return interest_level_prediction.interest_level_prediction_layout()
+        # pass
     elif pathname == "/price_prediction":
         pass
     elif pathname == "/gen_apartment":
