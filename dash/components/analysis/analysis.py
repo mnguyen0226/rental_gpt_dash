@@ -23,6 +23,7 @@ from components.analysis.pair_plot import pair_plot_info
 from components.analysis.heatmap import heatmap_info
 from components.analysis.qq_plot import qq_plot_info
 from components.analysis.reg_plot_1 import reg_plot_1_info
+from components.analysis.reg_plot_2 import reg_plot_2_info
 
 
 #######################################
@@ -315,7 +316,7 @@ def render_tab(tab_choice):
     if tab_choice == "analysis_reg_1":
         return reg_plot_1_info()
     if tab_choice == "analysis_reg_2":
-        return (html.P("analysis_reg_2"), html.P("analysis_reg_2"))
+        return reg_plot_2_info()
     if tab_choice == "analysis_reg_3":
         return (html.P("analysis_reg_3"), html.P("analysis_reg_3"))
     if tab_choice == "analysis_area":
