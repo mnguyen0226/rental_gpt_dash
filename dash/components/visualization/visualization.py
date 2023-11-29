@@ -9,6 +9,7 @@ import dash_bootstrap_components as dbc
 # file imports
 from maindash import my_app
 from components.visualization.map import map_info
+from components.visualization.price import price_info
 
 
 #######################################
@@ -143,8 +144,4 @@ def render_tab_1(tab_choice):
     if tab_choice == "visualization_map":
         return map_info()
     if tab_choice == "visualization_price":
-        return (
-            html.P("visualization_price"),
-            html.P("visualization_price"),
-            html.P("visualization_price"),
-        )
+        return price_info()

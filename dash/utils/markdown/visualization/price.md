@@ -1,3 +1,4 @@
+```python
 # import libraries
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -13,7 +14,9 @@ upper_bound = np.percentile(df["price"].values, 99)
 df_filtered = df[df["price"] <= upper_bound]
 
 # create new date columns
-df_filtered["date"] = pd.to_datetime(df_filtered["created"]).dt.date
+df_filtered["date"] = pd.to_datetime(
+    df_filtered["created"]
+).dt.date
 
 # line plot
 plt.figure(figsize=(10, 6))
@@ -23,3 +26,4 @@ plt.xlabel("Date")
 plt.ylabel("Price")
 plt.legend()
 plt.show()
+```
