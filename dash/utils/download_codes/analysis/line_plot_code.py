@@ -15,7 +15,7 @@ df_filtered = df[df["price"] <= upper_bound]
 # create new date columns
 df_filtered["date"] = pd.to_datetime(
     df_filtered["created"]
-).dt.date  # Returns numpy array of python datetime.date objects.
+).dt.date 
 
 # line plot
 plt.figure(figsize=(10, 6))
