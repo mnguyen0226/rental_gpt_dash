@@ -27,6 +27,7 @@ from components.analysis.reg_plot_2 import reg_plot_2_info
 from components.analysis.reg_plot_3 import reg_plot_3_info
 from components.analysis.area_plot import area_plot_info
 from components.analysis.violin_plot import violin_plot_info
+from components.analysis.joint_plot_1 import joint_plot_1_info
 
 
 #######################################
@@ -327,7 +328,7 @@ def render_tab(tab_choice):
     if tab_choice == "analysis_violin":
         return violin_plot_info()
     if tab_choice == "analysis_joint_1":
-        return (html.P("analysis_joint_1"), html.P("analysis_joint_1"))
+        return joint_plot_1_info()
     if tab_choice == "analysis_joint_2":
         return (html.P("analysis_joint_2"), html.P("analysis_joint_2"))
     if tab_choice == "analysis_rug":
