@@ -15,6 +15,7 @@ from components.analysis.count_plot_1 import count_plot_1_info
 from components.analysis.count_plot_2 import count_plot_2_info
 from components.analysis.count_plot_3 import count_plot_3_info
 from components.analysis.count_plot_4 import count_plot_4_info
+from components.analysis.count_plot_5 import count_plot_5_info
 
 
 #######################################
@@ -299,7 +300,7 @@ def render_tab_1(tab_choice):
     if tab_choice == "analysis_count_4":
         return count_plot_4_info()
     if tab_choice == "analysis_count_5":
-        return (html.P("analysis_count_5"), html.P("analysis_count_5"))
+        return count_plot_5_info()
     if tab_choice == "analysis_count_6":
         return (html.P("analysis_count_6"), html.P("analysis_count_6"))
     if tab_choice == "analysis_pie":
