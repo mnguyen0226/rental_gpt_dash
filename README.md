@@ -60,19 +60,27 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
   - Dataset with images only
 
 ### Phase 4. Dash Visualization Development [UI + ANALYSIS]
-- Dataset analysis, convert all to plotly.
-- Map Visualization: Use dash-leaflet or plotly.express to plot rental listings on a map. Users could filter by price range, number of bedrooms/bathrooms, or interest level.
-- Price Distribution: Interactive histograms or KDE plots for price where users can filter based on number of bedrooms, bathrooms, or location.
-- Feature Correlation: Heatmaps that update based on selected features to show correlations dynamically.
-- Interactive Table: Display a searchable and filterable table of listings where users can sort by different features like price, number of bedrooms, or interest level.
-  - Filtered by listing...
-- Design:
-  - Static + Dynamic: https://dash-molstar.everburstsun.net/drugs
-  - Prediction: https://dash-molstar.everburstsun.net/drugs
-  - ChatGPT: https://biomedical.dev6.rightinformation.com/genomic-analysis with listing
-- Dalle is possible: As we just need to have a pre-defined prompt and allow user to choose room number... then generate image.
-- All renthop image is online so we can do filtering
-- ChatGPT for listing, theres a button to "List top 5" to do api call making prediction on number of room... then filter.
+- **TODO** - DCC:
+  - Check list
+  - Dropdown
+  - Loading
+  - Radioitems
+  - RangeSlider
+  - Slider
+  - Tooltips
+  - Figure
+  - Label
+
+
+- **TODO from report**: Dataset analysis, convert all to plotly.
+  - PCA
+  - Normality Test
+  - Pearson Correlation Matris
+  - Statistic
+
+- Map Visualization Based On Interest: Use dash-leaflet or plotly.express to plot rental listings on a map. Users could filter by price range, number of bedrooms/bathrooms, or interest level.
+  - Slider
+- Price Change Based on Interest: Interactive histograms or KDE plots for price where users can filter based on number of bedrooms, bathrooms, or location.
 
 ### Phase 5. Real-time Prediction (data, image) with Flask [UI]
 - **Model 1**: Based on the tabular input of the user (without extracted features from image), can we predict the interest level. 
@@ -103,6 +111,10 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
     - Fine-tune: https://platform.openai.com/docs/guides/fine-tuning/use-a-fine-tuned-model
     - https://www.youtube.com/watch?v=bTYL-lFM22k
 
+### Phase: Property Filtering
+- Interactive Table: Display a searchable and filterable table of listings where users can sort by different features like price, number of bedrooms, or interest level.
+  - Filtered by listing...
+
 ### Phase 7. Mobile Development [UI + UX]
 - Task 1: Upload images and make prediction (help buyer evaluate the house).
 - Task 2: Image generation based on input (help client the house)
@@ -113,6 +125,15 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
 
 ### Phase 10. Report & Presentation
 - Create a python file for EDA
+
+### **TODO** Designs
+- Design:
+  - Static + Dynamic: https://dash-molstar.everburstsun.net/drugs
+  - Prediction: https://dash-molstar.everburstsun.net/drugs
+  - ChatGPT: https://biomedical.dev6.rightinformation.com/genomic-analysis with listing
+- Dalle is possible: As we just need to have a pre-defined prompt and allow user to choose room number... then generate image.
+- All renthop image is online so we can do filtering
+- ChatGPT for listing, theres a button to "List top 5" to do api call making prediction on number of room... then filter.
 
 ## Architecture
 

@@ -10,6 +10,7 @@ import dash_bootstrap_components as dbc
 from maindash import my_app
 from components.overview import overview
 from components.analysis import analysis
+from components.visualization import visualization
 
 #######################################
 # Initial Settings
@@ -128,7 +129,7 @@ my_app.layout = html.Div(
                 dash.page_container,
             ],
             className="content",
-            style=CONTENT_STYLE,  # Add the style here
+            style=CONTENT_STYLE,
             id="page-content",
         ),
     ]
@@ -144,7 +145,7 @@ def render_page_content(pathname):
     elif pathname == "/analysis":
         return analysis.analysis_layout()
     elif pathname == "/visualization":
-        pass
+        return visualization.visualization_layout()
     elif pathname == "/interest_level_prediction":
         pass
     elif pathname == "/price_prediction":

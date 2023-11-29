@@ -1,9 +1,6 @@
 # personal note
 dash_idea.md 
 
-# downloaded pretrained model (from featured_extraction.ipynb)
-notebooks/yolov5s.pt
-
 # large datasets
 data/sentimental_extraction_kaggle.csv
 data/sentimental_extraction_kaggle.json
