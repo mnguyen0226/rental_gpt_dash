@@ -64,7 +64,6 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
   - Check list
   - Dropdown
   - Loading
-  - Radioitems
   - RangeSlider
   - Slider
   - Tooltips

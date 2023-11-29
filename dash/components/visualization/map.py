@@ -25,24 +25,25 @@ df_filtered = df[df["price"] <= upper_bound]
 
 
 def map_layout():
-    layout = html.Div([dcc.Graph(id="interest-level-heatmap")])
+    layout = html.Div([dcc.Graph(id="visualization_interest_level_heatmap")])
     return layout
 
 
 def map_content():
     return html.Div(
         [
-            html.Div([html.H3("👁‍🗨 Observations")]),
+            html.Div([html.H3("🎛 Tune")]),
             html.Div(
                 [
-                    dcc.Dropdown(
-                        id="interest-level-dropdown",
+                    dcc.RadioItems(
+                        id="visualization_interest_level_radio",
                         options=[
                             {"label": "High Interest", "value": "high"},
                             {"label": "Medium Interest", "value": "medium"},
                             {"label": "Low Interest", "value": "low"},
                         ],
                         value="high",
+                        style={"width": "50%", "margin": "auto"}
                     ),
                 ]
             ),
@@ -50,10 +51,10 @@ def map_content():
     )
 
 
-# Callback to update heatmap based on dropdown selection
+# Callback to update heatmap based on radio selection
 @my_app.callback(
-    Output("interest-level-heatmap", "figure"),
-    [Input("interest-level-dropdown", "value")],
+    Output("visualization_interest_level_heatmap", "figure"),
+    [Input("visualization_interest_level_radio", "value")],
 )
 def update_heatmap(selected_interest):
     filtered_data = df_filtered[df_filtered["interest_level"] == selected_interest]
@@ -70,7 +71,7 @@ def update_heatmap(selected_interest):
 
     fig.update_layout(
         title={
-            "text": f"Heatmap of NYC Rental Listings Price Based On Interest Level",
+            'text': f"Heatmap of NYC Rental Listings - {selected_interest.capitalize()} Interest",
             "x": 0.5,
             "xanchor": "center",
         }
