@@ -32,7 +32,7 @@ fig = px.bar(
     count_df,
     x="weekday",
     y="count",
-    color="interest_level",  # This assumes 'interest_level' is a valid column in your dataframe
+    color="interest_level",
     category_orders={"interest_level": ["low", "medium", "high"]},
     title="Bar Chart of Interest Level in Weekday",
     labels={"count": "Interest Level Counts"},
