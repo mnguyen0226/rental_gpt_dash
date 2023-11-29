@@ -14,7 +14,14 @@ df_filtered = df[df["price"] <= upper_bound]
 df_interest_split = df.interest_level.value_counts().values
 df_interest_label = ["low", "medium", "high"]
 explode = (0.1, 0, 0)
-plt.pie(df_interest_split, explode=explode, labels=df_interest_label, autopct='%1.1f%%', shadow=True, startangle=140)
+plt.pie(
+    df_interest_split,
+    explode=explode,
+    labels=df_interest_label,
+    autopct="%1.1f%%",
+    shadow=True,
+    startangle=140,
+)
 plt.title("Percentages of Interests")
 plt.legend(df_interest_label, loc="best")
 plt.show()

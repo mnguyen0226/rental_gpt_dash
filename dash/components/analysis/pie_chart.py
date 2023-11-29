@@ -22,19 +22,15 @@ upper_bound = np.percentile(df["price"].values, 99)
 df_filtered = df[df["price"] <= upper_bound]
 
 # create pie chart
-fig = px.pie(
-    df, 
-    names='interest_level', 
-    title='Percentages of Interests',
-    hole=.3  
-)
+fig = px.pie(df, names="interest_level", title="Percentages of Interests", hole=0.3)
 
 fig.update_layout(
     title_x=0.5,
     legend_title_text="Interest Level",
 )
 
-fig.update_traces(textinfo='percent+label', pull=[0.1, 0, 0])
+fig.update_traces(textinfo="percent+label", pull=[0.1, 0, 0])
+
 
 def pie_chart_layout():
     layout = html.Div([dcc.Graph(figure=fig)])

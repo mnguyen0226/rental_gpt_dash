@@ -15,7 +15,7 @@ df_filtered = df[df["price"] <= upper_bound]
 # create new date columns
 df_filtered["quarter"] = pd.to_datetime(
     df_filtered["created"]
-).dt.quarter # The quarter of the date.
+).dt.quarter  # The quarter of the date.
 
 # count plot
 fig = plt.figure(figsize=(12, 6))
