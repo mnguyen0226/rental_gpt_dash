@@ -16,7 +16,7 @@ df_filtered = df[df["price"] <= upper_bound]
 # create new date columns
 df_filtered["day"] = pd.to_datetime(
     df_filtered["created"]
-).dt.day  # The month as January=1, December=12.
+).dt.day  # The day of the datetime.
 
 # count plot
 fig = plt.figure(figsize=(12, 6))
