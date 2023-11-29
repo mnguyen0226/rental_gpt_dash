@@ -29,6 +29,7 @@ from components.analysis.area_plot import area_plot_info
 from components.analysis.violin_plot import violin_plot_info
 from components.analysis.joint_plot_1 import joint_plot_1_info
 from components.analysis.joint_plot_2 import joint_plot_2_info
+from components.analysis.plot_3d import plot_3d_info
 
 
 #######################################
@@ -170,24 +171,12 @@ def analysis_layout():
                                         tab_id="analysis_joint_2",
                                     ),
                                     dbc.Tab(
-                                        label="Rug Plot",
-                                        tab_id="analysis_rug",
-                                    ),
-                                    dbc.Tab(
                                         label="3D Plot",
                                         tab_id="analysis_3d",
                                     ),
                                     dbc.Tab(
-                                        label="Contour Plot",
-                                        tab_id="analysis_contour",
-                                    ),
-                                    dbc.Tab(
                                         label="3D Contour Plot",
                                         tab_id="analysis_3d_contour",
-                                    ),
-                                    dbc.Tab(
-                                        label="Cluster Plot",
-                                        tab_id="analysis_cluster",
                                     ),
                                     dbc.Tab(
                                         label="Hexbin Plot",
@@ -332,16 +321,10 @@ def render_tab(tab_choice):
         return joint_plot_1_info()
     if tab_choice == "analysis_joint_2":
         return joint_plot_2_info()
-    if tab_choice == "analysis_rug":
-        return (html.P("analysis_rug"), html.P("analysis_rug"))
     if tab_choice == "analysis_3d":
-        return (html.P("analysis_3d"), html.P("analysis_3d"))
-    if tab_choice == "analysis_contour":
-        return (html.P("analysis_contour"), html.P("analysis_contour"))
+        return plot_3d_info()
     if tab_choice == "analysis_3d_contour":
         return (html.P("analysis_3d_contour"), html.P("analysis_3d_contour"))
-    if tab_choice == "analysis_cluster":
-        return (html.P("analysis_cluster"), html.P("analysis_cluster"))
     if tab_choice == "analysis_hexbin":
         return (html.P("analysis_hexbin"), html.P("analysis_hexbin"))
     if tab_choice == "analysis_strip_1":
