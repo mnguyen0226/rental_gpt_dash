@@ -30,6 +30,7 @@ from components.analysis.violin_plot import violin_plot_info
 from components.analysis.joint_plot_1 import joint_plot_1_info
 from components.analysis.joint_plot_2 import joint_plot_2_info
 from components.analysis.plot_3d import plot_3d_info
+from components.analysis.plot_3d_contour import plot_3d_contour_info
 
 
 #######################################
@@ -179,10 +180,6 @@ def analysis_layout():
                                         tab_id="analysis_3d_contour",
                                     ),
                                     dbc.Tab(
-                                        label="Hexbin Plot",
-                                        tab_id="analysis_hexbin",
-                                    ),
-                                    dbc.Tab(
                                         label="Strip Plot 1",
                                         tab_id="analysis_strip_1",
                                     ),
@@ -199,20 +196,20 @@ def analysis_layout():
                                         tab_id="analysis_swarm",
                                     ),
                                     dbc.Tab(
-                                        label="Story Plot 1",
-                                        tab_id="analysis_story_1",
+                                        label="Sub-Plot 1",
+                                        tab_id="analysis_subplot_1",
                                     ),
                                     dbc.Tab(
-                                        label="Story Plot 2",
-                                        tab_id="analysis_story_2",
+                                        label="Sub-Plot 2",
+                                        tab_id="analysis_subplot_2",
                                     ),
                                     dbc.Tab(
-                                        label="Story Plot 3",
-                                        tab_id="analysis_story_3",
+                                        label="Sub-Plot 3",
+                                        tab_id="analysis_subplot_3",
                                     ),
                                     dbc.Tab(
-                                        label="Story Plot 4",
-                                        tab_id="analysis_story_4",
+                                        label="Sub-Plot 4",
+                                        tab_id="analysis_subplot_4",
                                     ),
                                 ],
                                 active_tab="analysis_line",
@@ -324,9 +321,7 @@ def render_tab(tab_choice):
     if tab_choice == "analysis_3d":
         return plot_3d_info()
     if tab_choice == "analysis_3d_contour":
-        return (html.P("analysis_3d_contour"), html.P("analysis_3d_contour"))
-    if tab_choice == "analysis_hexbin":
-        return (html.P("analysis_hexbin"), html.P("analysis_hexbin"))
+        return plot_3d_contour_info()
     if tab_choice == "analysis_strip_1":
         return (html.P("analysis_strip_1"), html.P("analysis_strip_1"))
     if tab_choice == "analysis_strip_2":
@@ -335,11 +330,11 @@ def render_tab(tab_choice):
         return (html.P("analysis_strip_3"), html.P("analysis_strip_3"))
     if tab_choice == "analysis_swarm":
         return (html.P("analysis_swarm"), html.P("analysis_swarm"))
-    if tab_choice == "analysis_story_1":
-        return (html.P("analysis_story_1"), html.P("analysis_story_1"))
-    if tab_choice == "analysis_story_2":
-        return (html.P("analysis_story_2"), html.P("analysis_story_2"))
-    if tab_choice == "analysis_story_3":
-        return (html.P("analysis_story_3"), html.P("analysis_story_3"))
-    if tab_choice == "analysis_story_4":
-        return (html.P("analysis_story_4"), html.P("analysis_story_4"))
+    if tab_choice == "analysis_subplot_1":
+        return (html.P("analysis_subplot_1"), html.P("analysis_subplot_1"))
+    if tab_choice == "analysis_subplot_2":
+        return (html.P("analysis_subplot_2"), html.P("analysis_subplot_2"))
+    if tab_choice == "analysis_subplot_3":
+        return (html.P("analysis_subplot_3"), html.P("analysis_subplot_3"))
+    if tab_choice == "analysis_subplot_4":
+        return (html.P("analysis_subplot_4"), html.P("analysis_subplot_4"))
