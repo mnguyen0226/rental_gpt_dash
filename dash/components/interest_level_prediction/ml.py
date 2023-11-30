@@ -37,7 +37,7 @@ def ml_content():
         [
             html.Div([html.H3("🧠 Select Model")]),
             dcc.Dropdown(
-                id="model_selector",
+                id="ilp_ml_model_selector",
                 options=[{"label": key, "value": key} for key in models.keys()],
                 value="Decision Tree",
             ),
@@ -47,7 +47,7 @@ def ml_content():
             # slider for each feature
             html.Label("Number of Bathrooms", style={"fontWeight": "bold"}),
             dcc.Slider(
-                id="bathrooms_slider",
+                id="ilp_ml_bathrooms_slider",
                 min=0,
                 max=10,
                 step=0.5,
@@ -58,7 +58,7 @@ def ml_content():
             html.Br(),
             html.Label("Number of Bedrooms", style={"fontWeight": "bold"}),
             dcc.Slider(
-                id="bedrooms_slider",
+                id="ilp_ml_bedrooms_slider",
                 min=0,
                 max=8,
                 step=0.5,
@@ -69,7 +69,7 @@ def ml_content():
             html.Br(),
             html.Label("Estimated Price", style={"fontWeight": "bold"}),
             dcc.Slider(
-                id="price_slider",
+                id="ilp_ml_price_slider",
                 min=43,
                 max=13000,
                 step=100,
@@ -82,7 +82,7 @@ def ml_content():
                 "Apartment's Description Evaluation", style={"fontWeight": "bold"}
             ),
             dcc.RadioItems(
-                id="description_slider",
+                id="ilp_ml_description_slider",
                 options=[
                     {"label": "Positive", "value": 1},
                     {"label": "Neutral", "value": 0},
@@ -94,7 +94,7 @@ def ml_content():
             html.Br(),
             html.Label("Has Laundry", style={"fontWeight": "bold"}),
             dcc.RadioItems(
-                id="laundry_slider",
+                id="ilp_ml_laundry_slider",
                 options=[
                     {"label": "Yes", "value": 1},
                     {"label": "No", "value": 0},
@@ -104,7 +104,7 @@ def ml_content():
             html.Br(),
             html.Label("Has Dishwasher", style={"fontWeight": "bold"}),
             dcc.RadioItems(
-                id="dishwasher_slider",
+                id="ilp_ml_dishwasher_slider",
                 options=[
                     {"label": "Yes", "value": 1},
                     {"label": "No", "value": 0},
@@ -114,7 +114,7 @@ def ml_content():
             html.Br(),
             html.Label("Has Hardwood Floors", style={"fontWeight": "bold"}),
             dcc.RadioItems(
-                id="hardwood_slider",
+                id="ilp_ml_hardwood_slider",
                 options=[
                     {"label": "Yes", "value": 1},
                     {"label": "No", "value": 0},
@@ -124,7 +124,7 @@ def ml_content():
             html.Br(),
             html.Label("Allow Dog", style={"fontWeight": "bold"}),
             dcc.RadioItems(
-                id="dog_slider",
+                id="ilp_ml_dog_slider",
                 options=[
                     {"label": "Yes", "value": 1},
                     {"label": "No", "value": 0},
@@ -134,7 +134,7 @@ def ml_content():
             html.Br(),
             html.Label("Allow Cat", style={"fontWeight": "bold"}),
             dcc.RadioItems(
-                id="cat_slider",
+                id="ilp_ml_cat_slider",
                 options=[
                     {"label": "Yes", "value": 1},
                     {"label": "No", "value": 0},
@@ -144,7 +144,7 @@ def ml_content():
             html.Br(),
             html.Label("Has Doorman", style={"fontWeight": "bold"}),
             dcc.RadioItems(
-                id="doorman_slider",
+                id="ilp_ml_doorman_slider",
                 options=[
                     {"label": "Yes", "value": 1},
                     {"label": "No", "value": 0},
@@ -154,7 +154,7 @@ def ml_content():
             html.Br(),
             html.Label("Has Elevator", style={"fontWeight": "bold"}),
             dcc.RadioItems(
-                id="elevator_slider",
+                id="ilp_ml_elevator_slider",
                 options=[
                     {"label": "Yes", "value": 1},
                     {"label": "No", "value": 0},
@@ -164,7 +164,7 @@ def ml_content():
             html.Br(),
             html.Label("Has Application Fee", style={"fontWeight": "bold"}),
             dcc.RadioItems(
-                id="fee_slider",
+                id="ilp_ml_fee_slider",
                 options=[
                     {"label": "Yes", "value": 1},
                     {"label": "No", "value": 0},
@@ -174,7 +174,7 @@ def ml_content():
             html.Br(),
             html.Label("Has Fitness Center", style={"fontWeight": "bold"}),
             dcc.RadioItems(
-                id="fitness_slider",
+                id="ilp_ml_fitness_slider",
                 options=[
                     {"label": "Yes", "value": 1},
                     {"label": "No", "value": 0},
@@ -186,7 +186,7 @@ def ml_content():
                 "Predict Interest Level",
                 color="success",
                 className="me-1",
-                id="predict_button",
+                id="ilp_ml_predict_button",
                 n_clicks=0,
             ),
         ]
@@ -200,7 +200,7 @@ def ml_layout():
             html.Div([html.H3("👇 Result")]),
             html.Div(
                 [
-                    html.Div(id="prediction_output"),
+                    html.Div(id="ilp_ml_prediction_output"),
                 ]
             ),
         ]
@@ -208,23 +208,23 @@ def ml_layout():
 
 
 @my_app.callback(
-    Output("prediction_output", "children"),
-    [Input("predict_button", "n_clicks")],
+    Output("ilp_ml_prediction_output", "children"),
+    [Input("ilp_ml_predict_button", "n_clicks")],
     [
-        State("model_selector", "value"),
-        State("bathrooms_slider", "value"),
-        State("bedrooms_slider", "value"),
-        State("price_slider", "value"),
-        State("description_slider", "value"),
-        State("laundry_slider", "value"),
-        State("dishwasher_slider", "value"),
-        State("hardwood_slider", "value"),
-        State("dog_slider", "value"),
-        State("cat_slider", "value"),
-        State("doorman_slider", "value"),
-        State("elevator_slider", "value"),
-        State("fee_slider", "value"),
-        State("fitness_slider", "value"),
+        State("ilp_ml_model_selector", "value"),
+        State("ilp_ml_bathrooms_slider", "value"),
+        State("ilp_ml_bedrooms_slider", "value"),
+        State("ilp_ml_price_slider", "value"),
+        State("ilp_ml_description_slider", "value"),
+        State("ilp_ml_laundry_slider", "value"),
+        State("ilp_ml_dishwasher_slider", "value"),
+        State("ilp_ml_hardwood_slider", "value"),
+        State("ilp_ml_dog_slider", "value"),
+        State("ilp_ml_cat_slider", "value"),
+        State("ilp_ml_doorman_slider", "value"),
+        State("ilp_ml_elevator_slider", "value"),
+        State("ilp_ml_fee_slider", "value"),
+        State("ilp_ml_fitness_slider", "value"),
     ],
 )
 def predict(
