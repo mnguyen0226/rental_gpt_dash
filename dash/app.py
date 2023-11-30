@@ -12,6 +12,7 @@ from components.overview import overview
 from components.analysis import analysis
 from components.visualization import visualization
 from components.interest_level_prediction import interest_level_prediction
+from components.price_prediction import price_prediction
 
 #######################################
 # Initial Settings
@@ -83,7 +84,7 @@ sidebar = html.Div(
                 dbc.NavLink(
                     [
                         html.I(className="fas fa-solid fa-arrow-trend-up me-2"),
-                        html.Span("Price Prediction"),
+                        html.Span("Rental Cost Prediction"),
                     ],
                     href="/price_prediction",
                     active="exact",
@@ -149,9 +150,8 @@ def render_page_content(pathname):
         return visualization.visualization_layout()
     elif pathname == "/interest_level_prediction":
         return interest_level_prediction.interest_level_prediction_layout()
-        # pass
     elif pathname == "/price_prediction":
-        pass
+        return price_prediction.price_prediction_layout()
     elif pathname == "/gen_apartment":
         pass
     elif pathname == "/virtual_assistant":

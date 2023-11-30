@@ -122,6 +122,8 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
 
 ### Phase 9. Deploy
 - Will the docerization and running will actually work as the ml is trained on different environment while the model is run on different environment?
+- Route of models to different folder
+- Try to deploy with without database first
 
 ### Phase 10. Report & Presentation
 - Create a python file for EDA
