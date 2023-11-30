@@ -25,12 +25,6 @@ models = {
     "K-Nearest Neighbor": joblib.load("../notebooks/models/knn_model_generic_cls.pkl"),
 }
 
-image_urls = {
-    "High": "path_or_url_to_high_image.jpg",
-    "Medium": "path_or_url_to_medium_image.jpg",
-    "Low": "path_or_url_to_low_image.jpg",
-}
-
 
 def ml_content():
     layout = html.Div(
