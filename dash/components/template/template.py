@@ -13,7 +13,7 @@ from maindash import my_app
 #######################################
 # Layout
 #######################################
-def analysis_layout():
+def template_layout():
     layout = html.Div(
         [
             html.Div(
