@@ -135,6 +135,8 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
 - All renthop image is online so we can do filtering
 - ChatGPT for listing, theres a button to "List top 5" to do api call making prediction on number of room... then filter.
 - **Can you prepare a document that shows the steps on the deployment process through VT server instead of GCP?**
+- Add instruction and notes for each tab
+- Test build on another python environment (for submission)
 - **Share to BlackRock**
 
 ## Architecture

@@ -1,1 +1,1 @@
-gunicorn --bind :8081 --log-level info --workers 2 --threads 8 --timeout 0 app:server
+gunicorn --bind :8080 --log-level info --workers 2 --threads 8 --timeout 0 app:server

@@ -141,10 +141,23 @@ def render_tab(tab_choice):
     Returns:
         selected subtab's layout
     """
+    # return ml_info()
     if tab_choice == "interest_level_prediction_ml":
         return ml_info()
     if tab_choice == "interest_level_prediction_ml_img":
-        return (
-            html.P("interest_level_prediction_ml_img"),
-            html.P("interest_level_prediction_ml_img"),
+        note = html.Div(
+            [
+                html.Div([html.H3("🧪 Experimentation")]),
+                html.P(
+                    "Due to the lacked of data and poor performance of the trained model, I have decided not to deploy this tab. The image on the right show the working prototype of the model: The user will be able to attach image(s), YOLOv5 will extract additional features of interests, which will (hopefully) helps the ML make a more accurate prediction. The code of this prototype can be accessed here."
+                ),
+            ]
         )
+        image = html.Div(
+            [
+                html.Img(
+                    src="https://images.unsplash.com/photo-1641326038434-01b0217c18f1?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                )
+            ]
+        )
+        return note, image
