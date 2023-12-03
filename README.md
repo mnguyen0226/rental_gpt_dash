@@ -81,7 +81,7 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
   - Slider
 - Price Change Based on Interest: Interactive histograms or KDE plots for price where users can filter based on number of bedrooms, bathrooms, or location.
 
-### Phase 5. Real-time Prediction (data, image) with Flask [UI]
+### Phase 5. Real-time Prediction (data, image) with Flask [UI] - Done + Class
 - **Model 1**: Based on the tabular input of the user (without extracted features from image), can we predict the interest level. 
   - Customer: Agent
   - Classical ML.

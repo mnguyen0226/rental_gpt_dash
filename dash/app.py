@@ -91,14 +91,6 @@ sidebar = html.Div(
                 ),
                 dbc.NavLink(
                     [
-                        html.I(className="fas fa-solid fa-eye me-2"),
-                        html.Span("Generative Apartment"),
-                    ],
-                    href="/gen_apartment",
-                    active="exact",
-                ),
-                dbc.NavLink(
-                    [
                         html.I(className="fas fa-solid fa-comments me-2"),
                         html.Span("Virtual Assistant"),
                     ],
