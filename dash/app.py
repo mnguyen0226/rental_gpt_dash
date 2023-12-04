@@ -13,6 +13,7 @@ from components.analysis import analysis
 from components.visualization import visualization
 from components.interest_level_prediction import interest_level_prediction
 from components.price_prediction import price_prediction
+from components.virtual_assistant import virtual_assistant
 
 #######################################
 # Initial Settings
@@ -89,14 +90,14 @@ sidebar = html.Div(
                     href="/price_prediction",
                     active="exact",
                 ),
-                dbc.NavLink(
-                    [
-                        html.I(className="fas fa-solid fa-eye me-2"),
-                        html.Span("Generative Apartment"),
-                    ],
-                    href="/gen_apartment",
-                    active="exact",
-                ),
+                # dbc.NavLink(
+                #     [
+                #         html.I(className="fas fa-solid fa-eye me-2"),
+                #         html.Span("Generative Apartment"),
+                #     ],
+                #     href="/gen_apartment",
+                #     active="exact",
+                # ),
                 dbc.NavLink(
                     [
                         html.I(className="fas fa-solid fa-comments me-2"),
@@ -152,10 +153,10 @@ def render_page_content(pathname):
         return interest_level_prediction.interest_level_prediction_layout()
     elif pathname == "/price_prediction":
         return price_prediction.price_prediction_layout()
-    elif pathname == "/gen_apartment":
-        pass
+    # elif pathname == "/gen_apartment":
+    #     pass
     elif pathname == "/virtual_assistant":
-        pass
+        return virtual_assistant.virtual_assistant_layout()
     elif pathname == "/about":
         pass
     return dbc.Container(

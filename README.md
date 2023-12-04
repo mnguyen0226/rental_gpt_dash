@@ -81,7 +81,7 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
   - Slider
 - Price Change Based on Interest: Interactive histograms or KDE plots for price where users can filter based on number of bedrooms, bathrooms, or location.
 
-### Phase 5. Real-time Prediction (data, image) with Flask [UI]
+### Phase 5. Real-time Prediction (data, image) with Flask [UI] - Done
 - **Model 1**: Based on the tabular input of the user (without extracted features from image), can we predict the interest level. 
   - Customer: Agent
   - Classical ML.
@@ -104,11 +104,34 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
   - Customer: Renter
   - Customer service bot to answer the FAQs about the NYC rental market using the dataset as knowledge base and analysis.
   - Hard: from the chat, provide the listing of the relevant property to select?
-    - https://www.youtube.com/watch?v=EE1Y2enHrcU
-    - https://www.youtube.com/watch?v=4qNwoAAfnk4&t=17s
-    - https://github.com/plotly/all-in-ai-demo-app
-    - Fine-tune: https://platform.openai.com/docs/guides/fine-tuning/use-a-fine-tuned-model
-    - https://www.youtube.com/watch?v=bTYL-lFM22k
+
+- About [HugChat API](https://github.com/Soulter/hugging-chat-api)
+  - From HugChat Port: AI is an area of active research with known problems such as biased generation and misinformation. Do not use this application for high-stakes decisions or advice. Your conversations will be shared with model authors.
+  - How to add secret: aka your hugging face account: https://docs.streamlit.io/library/advanced-features/secrets-management
+  - [Tutorial](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)
+  - [Source Code](https://github.com/dataprofessor/hugchat/blob/master/app_v3.py)
+  - [YT Tutorial](https://www.youtube.com/watch?v=T_iE6TT7pS8)
+  - HugChat is Unofficial HuggingChat Python API, extensible for chatbots etc.
+  - [HuggingChat About](https://www.youtube.com/watch?v=7QChacb3-00)
+    - Fully Open-source
+    - Powered by Open Assistant's latest model - the best open source chat model: [oasst-sft-6-llama-30b](https://huggingface.co/OpenAssistant/oasst-sft-6-llama-30b-xor) 30 billion dataset
+    - The chatbot use the Huggingface UI. The performance is not as great as ChatGPT. This is an alternative.
+    - OpenAssistant dataset is human annotated, which make the conversation more natural.
+  - [Open Assistant](https://open-assistant.io/) biggest open LLM
+    - [Explained by WorldOfAI](https://www.youtube.com/watch?v=U-8Sicu-agc)
+      - Open Assistnat is a chat-based assistant that understands tasks, can interacct with 3rd party systems and retrieve info dynamically to do so. It can be extended and personalized easily and is developed as free, open-source software.
+      - Company is called LAOIN (Large-scale AI Open Network).
+      - 
+  - [Llama About]()
+
+- [Dash with ChatGPT](https://github.com/plotly/dash-sample-apps/blob/main/apps/dash-gpt3-chatbot/app.py)
+- [Hug-Chat](https://github.com/Soulter/hugging-chat-api/tree/master)
+- [Hug-Chat Example](https://github.com/dataprofessor/hugchat/blob/master/app_v3.py)
+
+- Note: 
+  - Predict features
+  - Reset Bot
+
 
 ### Phase: Property Filtering
 - Interactive Table: Display a searchable and filterable table of listings where users can sort by different features like price, number of bedrooms, or interest level.
@@ -133,13 +156,13 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
   - Static + Dynamic: https://dash-molstar.everburstsun.net/drugs
   - Prediction: https://dash-molstar.everburstsun.net/drugs
   - ChatGPT: https://biomedical.dev6.rightinformation.com/genomic-analysis with listing
-- Dalle is possible: As we just need to have a pre-defined prompt and allow user to choose room number... then generate image.
 - All renthop image is online so we can do filtering
 - ChatGPT for listing, theres a button to "List top 5" to do api call making prediction on number of room... then filter.
 - **Can you prepare a document that shows the steps on the deployment process through VT server instead of GCP?**
 - Add instruction and notes for each tab
 - Test build on another python environment (for submission)
 - **Share to BlackRock**
+- Add image Rental Cost + Hide Info
 
 ## Architecture
 
