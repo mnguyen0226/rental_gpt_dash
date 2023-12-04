@@ -99,7 +99,7 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
   - Classical ML
   - Dataset with images only
 
-### Phase 6. Chatbot Development
+### Phase 6. Chatbot Development - Done
 - **Model 5**: Usage of ChatGPT 
   - Customer: Renter
   - Customer service bot to answer the FAQs about the NYC rental market using the dataset as knowledge base and analysis.
@@ -137,21 +137,18 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
 - Interactive Table: Display a searchable and filterable table of listings where users can sort by different features like price, number of bedrooms, or interest level.
   - Filtered by listing...
 
+### Phase 9. Deploy
+- Will the docerization and running will actually work as the ml is trained on different environment while the model is run on different environment?
+- Route of models to different folder
+- Try to deploy with without database first
+
 ### Phase 7. Mobile Development [UI + UX]
 - Task 1: Upload images and make prediction (help buyer evaluate the house).
 - Task 2: Image generation based on input (help client the house)
 
 ### Phase 8. PyTest 
 
-### Phase 9. Deploy
-- Will the docerization and running will actually work as the ml is trained on different environment while the model is run on different environment?
-- Route of models to different folder
-- Try to deploy with without database first
-
-### Phase 10. Report & Presentation
-- Create a python file for EDA
-
-### **TODO** Designs
+### **TODO** Designs & Repo Clean Up
 - Design:
   - Static + Dynamic: https://dash-molstar.everburstsun.net/drugs
   - Prediction: https://dash-molstar.everburstsun.net/drugs
@@ -163,6 +160,11 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
 - Test build on another python environment (for submission)
 - **Share to BlackRock**
 - Add image Rental Cost + Hide Info
+- Add loading symbol
+
+### Phase 10. Report & Presentation
+- Create a python file for EDA
+
 
 ## Architecture
 
