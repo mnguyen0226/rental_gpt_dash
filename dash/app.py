@@ -14,6 +14,7 @@ from components.visualization import visualization
 from components.interest_level_prediction import interest_level_prediction
 from components.price_prediction import price_prediction
 from components.virtual_assistant import virtual_assistant
+from components.listing import listing
 
 #######################################
 # Initial Settings
@@ -53,7 +54,7 @@ sidebar = html.Div(
                 dbc.NavLink(
                     [
                         html.I(className="fas fa-home me-2"),
-                        html.Span("Apartment Listing"),
+                        html.Span("Apartments Listing"),
                     ],
                     href="/listing",
                     active="exact",
@@ -144,7 +145,7 @@ def render_page_content(pathname):
     if pathname == "/":
         pass
     elif pathname == "/listing":
-        pass
+        return listing.listing_layout()
     elif pathname == "/analysis":
         return analysis.analysis_layout()
     elif pathname == "/visualization":
