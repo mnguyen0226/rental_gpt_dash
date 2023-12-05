@@ -14,12 +14,8 @@ from utils.file_operation import read_file_as_str
 
 # load trained model
 models = {
-    "Support Vector Machine": joblib.load(
-        "models/svm_model_generic_cls.pkl"
-    ),
-    "Multi-layer Perceptron": joblib.load(
-        "models/mlp_model_generic_cls.pkl"
-    ),
+    "Support Vector Machine": joblib.load("models/svm_model_generic_cls.pkl"),
+    "Multi-layer Perceptron": joblib.load("models/mlp_model_generic_cls.pkl"),
     "Random Forest": joblib.load("models/rf_model_generic_cls.pkl"),
     "Decision Tree": joblib.load("models/dt_model_generic_cls.pkl"),
     "K-Nearest Neighbor": joblib.load("models/knn_model_generic_cls.pkl"),

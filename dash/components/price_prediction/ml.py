@@ -13,12 +13,8 @@ from maindash import my_app
 
 # load trained model
 models = {
-    "Support Vector Machine": joblib.load(
-        "models/svm_model_generic_reg.pkl"
-    ),
-    "Multi-layer Perceptron": joblib.load(
-        "models/mlp_model_generic_reg.pkl"
-    ),
+    "Support Vector Machine": joblib.load("models/svm_model_generic_reg.pkl"),
+    "Multi-layer Perceptron": joblib.load("models/mlp_model_generic_reg.pkl"),
     "Random Forest": joblib.load("models/rf_model_generic_reg.pkl"),
     "Decision Tree": joblib.load("models/dt_model_generic_reg.pkl"),
     "K-Nearest Neighbor": joblib.load("models/knn_model_generic_reg.pkl"),

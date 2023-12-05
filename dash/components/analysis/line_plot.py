@@ -18,6 +18,7 @@ from utils.file_operation import read_file_as_str
 # url = "https://raw.githubusercontent.com/mnguyen0226/two_sigma_property_listing/main/data/train.json"
 # df = pd.read_json(url)
 
+
 def line_plot_layout():
     layout = html.Div(
         [

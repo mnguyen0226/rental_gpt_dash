@@ -97,7 +97,7 @@ def card():
                                                 dbc.Button(
                                                     "Explore",
                                                     color="dark",
-                                                    href="",
+                                                    href="https://rentalgpt.discovery.cs.vt.edu/listing",
                                                     className="mx-auto d-block",  # center the button horizontally
                                                 ),
                                             ],
@@ -143,7 +143,7 @@ def card():
                                                 dbc.Button(
                                                     "Explore",
                                                     color="dark",
-                                                    href="",
+                                                    href="https://rentalgpt.discovery.cs.vt.edu/analysis",
                                                     className="mx-auto d-block",  # center the button horizontally
                                                 ),
                                             ],
@@ -188,7 +188,7 @@ def card():
                                                 dbc.Button(
                                                     "Explore",
                                                     color="dark",
-                                                    href="",
+                                                    href="https://rentalgpt.discovery.cs.vt.edu/visualization",
                                                     className="mx-auto d-block",  # center the button horizontally
                                                 ),
                                             ],
@@ -205,7 +205,7 @@ def card():
                             dbc.Card(
                                 [
                                     dbc.CardImg(
-                                        src="https://cdn.gobankingrates.com/wp-content/uploads/2023/06/house-for-sale-iStock-1470005312.jpg",
+                                        src="https://thehustle.co/wp-content/uploads/2023/02/HS-News-Brief_2023-02-03T015826.025Z.png",
                                         top=True,
                                         style={
                                             "opacity": 0.18,
@@ -232,7 +232,7 @@ def card():
                                                 dbc.Button(
                                                     "Explore",
                                                     color="dark",
-                                                    href="",
+                                                    href="https://rentalgpt.discovery.cs.vt.edu/interest_level_prediction",
                                                     className="mx-auto d-block",  # center the button horizontally
                                                 ),
                                             ],
@@ -280,7 +280,7 @@ def card():
                                                 dbc.Button(
                                                     "Explore",
                                                     color="dark",
-                                                    href="",
+                                                    href="https://rentalgpt.discovery.cs.vt.edu/price_prediction",
                                                     className="mx-auto d-block",  # center the button horizontally
                                                 ),
                                             ],
@@ -324,7 +324,7 @@ def card():
                                                 dbc.Button(
                                                     "Explore",
                                                     color="dark",
-                                                    href="",
+                                                    href="https://rentalgpt.discovery.cs.vt.edu/virtual_assistant",
                                                     className="mx-auto d-block",  # center the button horizontally
                                                 ),
                                             ],
