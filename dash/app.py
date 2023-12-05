@@ -15,6 +15,7 @@ from components.interest_level_prediction import interest_level_prediction
 from components.price_prediction import price_prediction
 from components.virtual_assistant import virtual_assistant
 from components.listing import listing
+from components.about import about
 
 #######################################
 # Initial Settings
@@ -159,7 +160,7 @@ def render_page_content(pathname):
     elif pathname == "/virtual_assistant":
         return virtual_assistant.virtual_assistant_layout()
     elif pathname == "/about":
-        pass
+        return about.about_layout()
     return dbc.Container(
         children=[
             html.H1(
