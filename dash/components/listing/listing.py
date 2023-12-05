@@ -95,6 +95,7 @@ def listing_layout():
 def left_side():
     return html.Div(
         [
+            html.Div([html.H3("🎛 Tune")]),
             html.Div(
                 [
                     html.Label("Number of Bathrooms", style={"fontWeight": "bold"}),
@@ -156,7 +157,7 @@ def left_side():
                     ),
                 ],
                 style={"display": "flex", "flexDirection": "column", "padding": "10px"},
-            )
+            ),
         ]
     )
 

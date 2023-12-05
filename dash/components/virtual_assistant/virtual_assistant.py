@@ -55,6 +55,7 @@ def virtual_assistant_layout():
                     "color": "white",
                 },
             ),
+            html.Br(),
             html.Div(
                 style={"display": "flex"},
                 children=[
@@ -79,7 +80,6 @@ def virtual_assistant_layout():
                     ),
                 ],
             ),
-            html.Br(),
             html.Br(),
             # content
             html.Div(

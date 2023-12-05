@@ -55,6 +55,7 @@ def interest_level_prediction_layout():
                     "color": "white",
                 },
             ),
+            html.Br(),
             html.Div(
                 style={"display": "flex"},
                 children=[
@@ -79,7 +80,6 @@ def interest_level_prediction_layout():
                     ),
                 ],
             ),
-            html.Br(),
             html.Br(),
             # content
             html.Div(

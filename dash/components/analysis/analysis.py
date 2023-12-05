@@ -78,6 +78,7 @@ def analysis_layout():
                     "color": "white",
                 },
             ),
+            html.Br(),
             # tab
             html.Div(
                 style={"display": "flex"},
@@ -186,7 +187,6 @@ def analysis_layout():
                     ),
                 ],
             ),
-            html.Br(),
             html.Br(),
             # content: analysis & plot
             html.Div(
