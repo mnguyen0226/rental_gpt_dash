@@ -6,17 +6,23 @@ from hugchat import hugchat
 from hugchat.login import Login
 import time
 
-HARDCODED_EMAIL = "mnguyen0226@vt.edu"
-HARDCODED_PASSWORD = "Minh123456!!!"
+# this is not recommended, usually, the account will be stored in .env file
+HARDCODED_EMAIL = "mnguyen0226.swetest@gmail.com"
+HARDCODED_PASSWORD = "Rentalgpt123!"
 
 # file imports
 from maindash import my_app
+from utils.file_operation import read_file_as_str
 
 
 def chatbot_content():
     layout = html.Div(
         [
-            html.Div([html.H3("🧐 General Idea")]),
+            html.Div([html.H3("🧐 Development")]),
+            dcc.Markdown(
+                children=read_file_as_str("./utils/markdown/virtual_assistant/va.md"),
+                mathjax=True,
+            ),
         ]
     )
     return layout

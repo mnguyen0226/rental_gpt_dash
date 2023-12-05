@@ -66,7 +66,7 @@ def virtual_assistant_layout():
                                 id="virtual_assistant_selected_tab",
                                 children=[
                                     dbc.Tab(
-                                        label="Llama Chatbot",
+                                        label="LLaMA Chatbot",
                                         tab_id="hugging_face",
                                     ),
                                     dbc.Tab(
@@ -87,7 +87,7 @@ def virtual_assistant_layout():
                 children=[
                     html.Div(
                         style={
-                            "width": "50%",
+                            "width": "30%",
                             "padding": "10px",
                         },
                         children=[
@@ -96,7 +96,7 @@ def virtual_assistant_layout():
                     ),
                     html.Div(
                         style={
-                            "width": "50%",
+                            "width": "70%",
                             # "height": "calc(70vh - 250px)",
                             # "overflow-y": "auto",
                             "padding": "10px",
@@ -146,9 +146,51 @@ def render_tab_1(tab_choice):
     if tab_choice == "hugging_face":
         return chatbot_info()
     if tab_choice == "streamlit":
-        return (
-            html.P(
-                "Note about streamlit. Remember to add code for simple llama template"
-            ),
-            html.P("images"),
+        note = html.Div(
+            [
+                html.H3("🧪 Experimentation"),
+                html.P(
+                    [
+                        "The template for HuggingFace chatbot developed via Streamlit & HugChat can be found ",
+                        html.A(
+                            "here",
+                            href="https://github.com/mnguyen0226/rental_gpt_dash/tree/main/experimentation/streamlit_llama_chatbot",
+                            target="_blank",
+                        ),
+                        ".",
+                    ]
+                ),
+                html.P(
+                    [
+                        "The template for HuggingFace chatbot developed via Dash & HugChat can be found ",
+                        html.A(
+                            "here",
+                            href="https://github.com/mnguyen0226/rental_gpt_dash/tree/main/experimentation/dash_llama_chatbot",
+                            target="_blank",
+                        ),
+                        ".",
+                    ]
+                ),
+            ]
         )
+
+        img = html.Div(
+            [
+                html.Img(
+                    src="https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/experience_streamlit_chatbot.png",
+                    style={
+                        "width": "63%",
+                        "height": "auto",
+                    },
+                ),
+                html.Img(
+                    src="https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/experience_dash_chatbot.png",
+                    style={
+                        "width": "37%",
+                        "height": "auto",
+                    },
+                ),
+            ]
+        )
+
+        return note, img

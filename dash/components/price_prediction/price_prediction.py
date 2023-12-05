@@ -153,7 +153,7 @@ def render_tab(tab_choice):
                             "Due to the lack of data and poor performance of the trained model, I have decided not to deploy this tab. The demo can be seen on the right. General idea: The user will be able to attach image(s), YOLOv5 will extract additional features of interests, which will (hopefully) help the ML make a more accurate prediction. The code of the prototype can be accessed ",
                             html.A(
                                 "here",
-                                href="https://github.com/mnguyen0226/two_sigma_property_listing/tree/main/experimentation/price_prediction_with_images",
+                                href="https://github.com/mnguyen0226/rental_gpt_dash/tree/main/experimentation/price_prediction_with_images",
                                 target="_blank",
                             ),
                             ".",
