@@ -97,7 +97,7 @@ def left_side():
         [
             html.Div(
                 [
-                    html.Label("Number of Bathrooms"),
+                    html.Label("Number of Bathrooms", style={"fontWeight": "bold"}),
                     dcc.Slider(
                         id="listing_bathrooms_filter",
                         min=0,
@@ -108,7 +108,7 @@ def left_side():
                         tooltip={"placement": "bottom", "always_visible": True},
                     ),
                     html.Br(),
-                    html.Label("Number of Bedrooms"),
+                    html.Label("Number of Bedrooms", style={"fontWeight": "bold"}),
                     dcc.Slider(
                         id="listing_bedrooms_filter",
                         min=0,
@@ -119,7 +119,7 @@ def left_side():
                         tooltip={"placement": "bottom", "always_visible": True},
                     ),
                     html.Br(),
-                    html.Label("Sort by Price"),
+                    html.Label("Sort by Price", style={"fontWeight": "bold"}),
                     dcc.Dropdown(
                         id="listing_price_sorting",
                         options=[
@@ -130,7 +130,7 @@ def left_side():
                         value="none",
                     ),
                     html.Br(),
-                    html.Label("Filtered by Features"),
+                    html.Label("Filter by Preferences", style={"fontWeight": "bold"}),
                     dcc.Checklist(
                         id="listing_features_filter",
                         options=[
