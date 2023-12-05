@@ -55,6 +55,7 @@ def about_layout():
                     "color": "white",
                 },
             ),
+            html.Br(),
             html.Div(
                 style={"display": "flex"},
                 children=[

@@ -16,6 +16,7 @@ from components.price_prediction import price_prediction
 from components.virtual_assistant import virtual_assistant
 from components.listing import listing
 from components.about import about
+from components.overview import overview
 
 #######################################
 # Initial Settings
@@ -144,7 +145,7 @@ my_app.layout = html.Div(
 @my_app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
     if pathname == "/":
-        pass
+        return overview.overview_layout()
     elif pathname == "/listing":
         return listing.listing_layout()
     elif pathname == "/analysis":
