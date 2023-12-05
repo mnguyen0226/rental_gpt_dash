@@ -194,7 +194,7 @@ def analysis_layout():
                 children=[
                     html.Div(
                         style={
-                            "width": "50%",
+                            "width": "30%",
                             "padding": "10px",
                         },
                         children=[
@@ -203,7 +203,7 @@ def analysis_layout():
                     ),
                     html.Div(
                         style={
-                            "width": "50%",
+                            "width": "70%",
                             "padding": "10px",
                         },
                         children=[

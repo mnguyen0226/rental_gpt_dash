@@ -22,7 +22,7 @@ upper_bound = np.percentile(df["price"].values, 99)
 df_filtered = df[df["price"] <= upper_bound]
 
 # prepare the data for the plot
-df_filtered["quarter"] = pd.to_datetime(df_filtered["created"]).dt.weekday
+df_filtered["quarter"] = pd.to_datetime(df_filtered["created"]).dt.quarter
 count_df = (
     df_filtered.groupby(["quarter", "interest_level"]).size().reset_index(name="count")
 )
@@ -48,7 +48,11 @@ fig.update_layout(
 
 
 def count_plot_6_layout():
-    layout = html.Div([dcc.Graph(figure=fig)])
+    layout = html.Div(
+        [
+            dcc.Loading(children=[dcc.Graph(figure=fig)], type="circle"),
+        ]
+    )
     return layout
 
 

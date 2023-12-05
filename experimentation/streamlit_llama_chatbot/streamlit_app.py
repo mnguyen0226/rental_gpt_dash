@@ -9,38 +9,48 @@ st.set_page_config(page_title="🤗🦙💬 Meta's LLaMA")
 # Hugging Face Credentials
 with st.sidebar:
     st.title("🤗🦙💬 Meta's LLaMA")
-    if ('EMAIL' in st.secrets) and ('PASS' in st.secrets):
-        st.success('HuggingFace Login credentials already provided!', icon='✅')
-        hf_email = st.secrets['EMAIL']
-        hf_pass = st.secrets['PASS']
+    if ("EMAIL" in st.secrets) and ("PASS" in st.secrets):
+        st.success("HuggingFace Login credentials already provided!", icon="✅")
+        hf_email = st.secrets["EMAIL"]
+        hf_pass = st.secrets["PASS"]
     else:
-        hf_email = st.text_input('Enter E-mail:', type='password')
-        hf_pass = st.text_input('Enter password:', type='password')
+        hf_email = st.text_input("Enter E-mail:", type="password")
+        hf_pass = st.text_input("Enter password:", type="password")
         if not (hf_email and hf_pass):
-            st.warning('Please enter your credentials!', icon='⚠️')
+            st.warning("Please enter your credentials!", icon="⚠️")
         else:
-            st.success('Proceed to entering your prompt message!', icon='👉')
-    st.markdown('📖 Learn how to build this app in this [blog](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)!')
+            st.success("Proceed to entering your prompt message!", icon="👉")
+    st.markdown(
+        "📖 Learn how to build this app in this [blog](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)!"
+    )
 
 # store LLM generated responses
 if "messages" not in st.session_state:
-    st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
+    st.session_state.messages = [
+        {"role": "assistant", "content": "How may I assist you today?"}
+    ]
 
 # display or clear chat messages
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
 
+
 def clear_chat_history():
-    st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
-st.sidebar.button('Clear Chat History', on_click=clear_chat_history)
+    st.session_state.messages = [
+        {"role": "assistant", "content": "How may I assist you today?"}
+    ]
+
+
+st.sidebar.button("Clear Chat History", on_click=clear_chat_history)
+
 
 # function for generating LLM response
 def generate_response(prompt_input, email, passwd):
     # Hugging Face Login
     sign = Login(email, passwd)
     cookies = sign.login()
-    # create ChatBot                        
+    # create ChatBot
     chatbot = hugchat.ChatBot(cookies=cookies.get_dict())
 
     for dict_message in st.session_state.messages:
@@ -53,6 +63,7 @@ def generate_response(prompt_input, email, passwd):
     prompt = f"{string_dialogue} {prompt_input} Assistant: "
     return chatbot.chat(prompt)
 
+
 # user-provided prompt
 if prompt := st.chat_input(disabled=not (hf_email and hf_pass)):
     st.session_state.messages.append({"role": "user", "content": prompt})
@@ -63,7 +74,7 @@ if prompt := st.chat_input(disabled=not (hf_email and hf_pass)):
 if st.session_state.messages[-1]["role"] != "assistant":
     with st.chat_message("assistant"):
         with st.spinner("Thinking..."):
-            response = generate_response(prompt, hf_email, hf_pass) 
-            st.write(response) 
+            response = generate_response(prompt, hf_email, hf_pass)
+            st.write(response)
     message = {"role": "assistant", "content": response}
     st.session_state.messages.append(message)

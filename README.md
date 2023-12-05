@@ -160,7 +160,7 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
 - Test build on another python environment (for submission)
 - **Share to BlackRock**
 - Add image Rental Cost + Hide Info
-- Add loading symbol
+- About: Me, Architecture, Technology I Used
 
 ### Phase 10. Report & Presentation
 - Create a python file for EDA

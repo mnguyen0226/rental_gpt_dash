@@ -42,7 +42,11 @@ fig.update_layout(
 
 
 def plot_3d_contour_layout():
-    layout = html.Div([dcc.Graph(figure=fig)])
+    layout = html.Div(
+        [
+            dcc.Loading(children=[dcc.Graph(figure=fig)], type="circle"),
+        ]
+    )
     return layout
 
 

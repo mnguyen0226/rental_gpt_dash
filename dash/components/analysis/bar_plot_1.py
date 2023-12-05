@@ -37,7 +37,11 @@ fig.update_layout(
 
 
 def bar_plot_1_layout():
-    layout = html.Div([dcc.Graph(figure=fig)])
+    layout = html.Div(
+        [
+            dcc.Loading(children=[dcc.Graph(figure=fig)], type="circle"),
+        ]
+    )
     return layout
 
 

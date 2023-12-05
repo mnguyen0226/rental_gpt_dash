@@ -182,7 +182,9 @@ def ml_layout():
             html.Div([html.H3("👇 Result")]),
             html.Div(
                 [
-                    html.Div(id="pp_ml_prediction_output"),
+                    dcc.Loading(
+                        children=[html.Div(id="pp_ml_prediction_output")], type="circle"
+                    ),
                 ]
             ),
         ]

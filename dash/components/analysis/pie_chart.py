@@ -33,7 +33,11 @@ fig.update_traces(textinfo="percent+label", pull=[0.1, 0, 0])
 
 
 def pie_chart_layout():
-    layout = html.Div([dcc.Graph(figure=fig)])
+    layout = html.Div(
+        [
+            dcc.Loading(children=[dcc.Graph(figure=fig)], type="circle"),
+        ]
+    )
     return layout
 
 

@@ -15,7 +15,9 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 # define the layout of the app
 app.layout = dbc.Container(
     [
-        dbc.Row(dbc.Col(html.H1("🤗🦙💬 Meta's LLaMA", className="text-center"), width=12)),
+        dbc.Row(
+            dbc.Col(html.H1("🤗🦙💬 Meta's LLaMA", className="text-center"), width=12)
+        ),
         html.Br(),
         dbc.Row(
             dbc.Col(
@@ -81,7 +83,7 @@ def update_chat(send_n_clicks, reset_n_clicks, message, chat_history):
 
     # clear chat area and message input
     if button_id == "reset-button":
-        return [], "", None  
+        return [], "", None
 
     if message:
         # simulate loading time (not needed)
@@ -126,7 +128,7 @@ def handle_hugchat_logic(email, password, user_message):
         response = chatbot.chat(prompt)
 
         return response
-    
+
     # handle exceptions (like login failure, API errors, etc.)
     except Exception as e:
         print("Error in HugChat logic:", e)

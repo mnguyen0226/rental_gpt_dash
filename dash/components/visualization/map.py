@@ -25,7 +25,13 @@ df_filtered = df[df["price"] <= upper_bound]
 
 
 def map_layout():
-    layout = html.Div([dcc.Graph(id="visualization_map_heatmap")])
+    layout = html.Div(
+        [
+            dcc.Loading(
+                children=[dcc.Graph(id="visualization_map_heatmap")], type="circle"
+            ),
+        ]
+    )
     return layout
 
 

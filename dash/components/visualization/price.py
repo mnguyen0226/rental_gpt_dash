@@ -25,7 +25,13 @@ df_filtered = df[df["price"] <= upper_bound]
 
 
 def price_layout():
-    layout = html.Div([dcc.Graph(id="visualization_price_line_plot")])
+    layout = html.Div(
+        [
+            dcc.Loading(
+                children=[dcc.Graph(id="visualization_price_line_plot")], type="circle"
+            ),
+        ]
+    )
     return layout
 
 

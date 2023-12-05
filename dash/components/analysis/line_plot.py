@@ -17,13 +17,18 @@ from utils.file_operation import read_file_as_str
 def line_plot_layout():
     layout = html.Div(
         [
-            dcc.DatePickerRange(
-                id="analysis_line_plot_date",
-                start_date=pd.to_datetime("2016-04-01"),
-                end_date=pd.to_datetime("2016-07-01"),
-                display_format="YYYY-MM-DD",
-            ),
-            dcc.Graph(id="analysis_line_price_graph"),
+            dcc.Loading(
+                children=[
+                    dcc.DatePickerRange(
+                        id="analysis_line_plot_date",
+                        start_date=pd.to_datetime("2016-04-01"),
+                        end_date=pd.to_datetime("2016-07-01"),
+                        display_format="YYYY-MM-DD",
+                    ),
+                    dcc.Graph(id="analysis_line_price_graph"),
+                ],
+                type="circle",
+            )
         ]
     )
     return layout
