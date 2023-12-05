@@ -56,6 +56,12 @@ def overview_layout():
                 },
             ),
             html.Br(),
+            html.H3("🌟 Services"),
+            dcc.Markdown(
+                children=read_file_as_str("./utils/markdown/overview/overview.md"),
+                mathjax=True,
+            ),
+            html.Br(),
             card(),
         ]
     )
@@ -219,7 +225,7 @@ def card():
                                                     style={"height": "100px"},
                                                     children=[
                                                         html.H4(
-                                                            "Interest Level Prediction",
+                                                            "Customer's Interest Level Prediction",
                                                             className="card-title text-center",  # apply text-center class
                                                         ),
                                                     ],
@@ -311,7 +317,7 @@ def card():
                                                     style={"height": "100px"},
                                                     children=[
                                                         html.H4(
-                                                            "LlaMA Virtual Assistant",
+                                                            "LLaMA Virtual Assistant",
                                                             className="card-title text-center",  # apply text-center class
                                                         ),
                                                     ],
@@ -333,12 +339,14 @@ def card():
                                 ],
                                 style={"width": "18rem"},
                             ),
-                            html.Br(),
                         ]
                     ),
                 ],
                 className="mb-4",
             ),
+            html.Br(),
+            html.Hr(),
+            html.H3("📱Mobile App"),
         ],
     )
     return layout
