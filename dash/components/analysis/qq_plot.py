@@ -14,7 +14,6 @@ import plotly.graph_objs as go
 # file imports
 from maindash import my_app
 from maindash import df
-
 from utils.file_operation import read_file_as_str
 
 # # import the dataset

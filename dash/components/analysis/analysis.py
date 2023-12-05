@@ -16,9 +16,9 @@ from components.analysis.count_plot_2 import count_plot_2_info
 from components.analysis.count_plot_3 import count_plot_3_info
 from components.analysis.count_plot_4 import count_plot_4_info
 from components.analysis.count_plot_5 import count_plot_5_info
-# from components.analysis.count_plot_6 import count_plot_6_info
+from components.analysis.count_plot_6 import count_plot_6_info
 from components.analysis.pie_chart import pie_chart_info
-# from components.analysis.dist_plot import dist_plot_info
+from components.analysis.dist_plot import dist_plot_info
 from components.analysis.pair_plot import pair_plot_info
 from components.analysis.heatmap import heatmap_info
 from components.analysis.qq_plot import qq_plot_info
@@ -127,10 +127,10 @@ def analysis_layout():
                                         label="Pie Chart",
                                         tab_id="analysis_pie",
                                     ),
-                                    # dbc.Tab(
-                                    #     label="Dist Plot",
-                                    #     tab_id="analysis_dist",
-                                    # ),
+                                    dbc.Tab(
+                                        label="Dist Plot",
+                                        tab_id="analysis_dist",
+                                    ),
                                     dbc.Tab(
                                         label="Pair Plot",
                                         tab_id="analysis_pair",
@@ -260,12 +260,12 @@ def render_tab(tab_choice):
         return count_plot_4_info()
     if tab_choice == "analysis_count_5":
         return count_plot_5_info()
-    # if tab_choice == "analysis_count_6":
-    #     return count_plot_6_info()
+    if tab_choice == "analysis_count_6":
+        return count_plot_6_info()
     if tab_choice == "analysis_pie":
         return pie_chart_info()
-    # if tab_choice == "analysis_dist":
-    #     return dist_plot_info()
+    if tab_choice == "analysis_dist":
+        return dist_plot_info()
     if tab_choice == "analysis_pair":
         return pair_plot_info()
     if tab_choice == "analysis_heatmap":
