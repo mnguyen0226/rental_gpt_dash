@@ -142,6 +142,8 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
 - Route of models to different folder
 - Try to deploy with without database first
 
+docker build -t mnguyen0226/rental_gpt_dash .
+
 ### Phase 7. Mobile Development [UI + UX]
 - Task 1: Upload images and make prediction (help buyer evaluate the house).
 - Task 2: Image generation based on input (help client the house)

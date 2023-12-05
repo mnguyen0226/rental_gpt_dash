@@ -15,14 +15,14 @@ from utils.file_operation import read_file_as_str
 # load trained model
 models = {
     "Support Vector Machine": joblib.load(
-        "../notebooks/models/svm_model_generic_cls.pkl"
+        "models/svm_model_generic_cls.pkl"
     ),
     "Multi-layer Perceptron": joblib.load(
-        "../notebooks/models/mlp_model_generic_cls.pkl"
+        "models/mlp_model_generic_cls.pkl"
     ),
-    "Random Forest": joblib.load("../notebooks/models/rf_model_generic_cls.pkl"),
-    "Decision Tree": joblib.load("../notebooks/models/dt_model_generic_cls.pkl"),
-    "K-Nearest Neighbor": joblib.load("../notebooks/models/knn_model_generic_cls.pkl"),
+    "Random Forest": joblib.load("models/rf_model_generic_cls.pkl"),
+    "Decision Tree": joblib.load("models/dt_model_generic_cls.pkl"),
+    "K-Nearest Neighbor": joblib.load("models/knn_model_generic_cls.pkl"),
 }
 
 

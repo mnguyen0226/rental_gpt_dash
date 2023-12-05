@@ -11,11 +11,13 @@ from dash import State
 
 # file imports
 from maindash import my_app
+from maindash import df
+
 from utils.file_operation import read_file_as_str
 
-# import the dataset
-url = "https://raw.githubusercontent.com/mnguyen0226/two_sigma_property_listing/main/data/train.json"
-df = pd.read_json(url)
+# # import the dataset
+# url = "https://raw.githubusercontent.com/mnguyen0226/two_sigma_property_listing/main/data/train.json"
+# df = pd.read_json(url)
 
 # outlier removal
 upper_bound = np.percentile(df["price"].values, 99)

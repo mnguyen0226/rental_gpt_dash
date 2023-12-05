@@ -11,8 +11,12 @@ from dash import State
 
 # file imports
 from maindash import my_app
+from maindash import df
 from utils.file_operation import read_file_as_str
 
+# # read the data
+# url = "https://raw.githubusercontent.com/mnguyen0226/two_sigma_property_listing/main/data/train.json"
+# df = pd.read_json(url)
 
 def line_plot_layout():
     layout = html.Div(
@@ -45,10 +49,6 @@ def update_graph(start_date, end_date):
     # convert the date strings to datetime objects
     start_date = pd.to_datetime(start_date).date()
     end_date = pd.to_datetime(end_date).date()
-
-    # read the data
-    url = "https://raw.githubusercontent.com/mnguyen0226/two_sigma_property_listing/main/data/train.json"
-    df = pd.read_json(url)
 
     # outlier removal
     upper_bound = np.percentile(df["price"].values, 99)

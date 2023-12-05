@@ -3,6 +3,7 @@ FROM python:3.8-slim-buster
 
 # Copy local code to the container image.
 ENV APP_HOME /app
+ENV PORT 8050
 ENV PYTHONUNBUFFERED True
 WORKDIR $APP_HOME
 

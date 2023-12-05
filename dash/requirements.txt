@@ -1,15 +1,19 @@
-dash
 Flask
 Flask-Compress
 itsdangerous
 Jinja2
-matplotlib
-numpy
 packaging
-pandas
 patsy
 pipreqs
-plotly
+statsmodels
 streamlit == 1.23.0
 hugchat==0.3.8
 python-dotenv == 1.0.0
+dash-bootstrap-components==1.4.1
+scikit_learn==1.1.2
+numpy==1.20.1
+pandas==1.2.4
+plotly==5.11.0
+autograd==1.5
+dash==2.9.3
+matplotlib==3.3.4
