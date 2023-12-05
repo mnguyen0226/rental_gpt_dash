@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # import the dataset
-url = "https://raw.githubusercontent.com/mnguyen0226/two_sigma_property_listing/main/data/train.json"
+url = "https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/data/train.json"
 df = pd.read_json(url)
 
 # outlier removal
