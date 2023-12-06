@@ -1,3 +1,5 @@
+# Reference: https://github.com/dataprofessor/hugchat/blob/master/app_v3.py
+
 import streamlit as st
 from hugchat import hugchat
 from hugchat.login import Login
