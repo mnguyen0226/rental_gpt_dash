@@ -1,0 +1,15 @@
+dash
+Flask
+Flask-Compress
+itsdangerous
+Jinja2
+matplotlib
+numpy
+packaging
+pandas
+patsy
+pipreqs
+plotly
+streamlit == 1.23.0
+hugchat==0.3.8
+python-dotenv == 1.0.0
