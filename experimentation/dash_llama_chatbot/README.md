@@ -5,6 +5,7 @@
 On your terminal, create a new python environment.
 ```
 conda create -n hugchat_dash
+conda activate hugchat_dash
 ```
 
 On your terminal, install all package.

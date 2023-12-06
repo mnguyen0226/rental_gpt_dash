@@ -4,6 +4,7 @@
 On your terminal, create a new python environment.
 ```
 conda create -n rental_gpt_app
+conda activate rental_gpt_app
 ```
 
 On your terminal, install all package.
