@@ -19,7 +19,6 @@ Using various techniques
 - Image Feature Extraction via PyTorch's YOLO.v5.
 
 Codebase:
-- 
 
 ### EDA
 Explore the dataset, reveal underlying information by plotting static plots for processed features. Here's the list of analysis: `outlider detection & removal`, `PCA`, `statistical test` (K-S, Shapiro-Witt, D'K^2), `Bar plot`, `Count plot`, `Pie chart`, `Distribution plot`, `Pair plot`, `Heatmap`, `Histogram with KDE`, `QQ plot`, `KDE`, `Regression plot with scatter representation and regression line`, `Boxen plot`, `Area plot`, `Violin plot`, `Joint plot with KDE and scatter representation`, `Rug plot`, `3D plot`, `Contour plot`, `Cluster map`, `Hexbin`, `Strip plot`, `Swarm plot`, `Subplots`.
@@ -32,7 +31,6 @@ I used Sklearn's SVM, Decision Tree, Random Forest, MLP, KNN.
 **Type 1**: Based on the tabular input of the user (without extracted features from image), can we predict the interest level. 
 
 Codebase:
--
 
 **Type 2**: Based on the tabular input of the user and the image, can we predict the interest level.
 
@@ -118,11 +116,19 @@ your application.
 
 ## References
 [1] “Two Sigma Connect: Rental Listing Inquiries | Kaggle,” Kaggle.com, 2023. https://www.kaggle.com/competitions/two-sigma-connect-rental-listing-inquiries/data?select=train.json.zip (accessed Nov. 23, 2023).
+
 ‌[2] [Huging Chat API](https://github.com/Soulter/hugging-chat-api)
+
 [3] [HugChat Chatbot with Streamlit Blog](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)
+
 [4] [HugChat Chatbot with Streamlit Code](https://github.com/dataprofessor/hugchat/blob/master/app_v3.py)
+
 [5] [OpenAssistant LLaMA 30B SFT 6](https://huggingface.co/OpenAssistant/oasst-sft-6-llama-30b-xor)
+
 [6] [HuggingChat - New Open Source Alternative to ChatGPT](https://www.youtube.com/watch?v=7QChacb3-00)
+
 [7] [Open Assistant](https://open-assistant.io/)
+
 [8] [Dash with ChatGPT Code](https://github.com/plotly/dash-sample-apps/blob/main/apps/dash-gpt3-chatbot/app.py)
+
 [9] [HugChat API Repository](https://github.com/Soulter/hugging-chat-api/tree/master)
