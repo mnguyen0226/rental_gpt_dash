@@ -20,7 +20,7 @@ On your terminal, run the dash application.
 streamlit run streamlit_app.py
 ```
 
-## Referenece
+## References
 [1] [HugChat Chatbot with Streamlit Blog](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)
 
 [2] [HugChat Chatbot with Streamlit Code](https://github.com/dataprofessor/hugchat/blob/master/app_v3.py)
