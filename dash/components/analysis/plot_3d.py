@@ -59,7 +59,7 @@ def plot_3d_content():
             html.Div(
                 [
                     html.P(
-                        "The 3D scatter plot provides a visual representation of the relationship between the number of bedrooms and bathrooms against the price. It shows that generally, as the number of bedrooms and bathrooms increases, so does the price. The plot also reveals the distribution of data points, with a concentration in the lower bedroom and bathroom range, indicating a greater number of more affordable listings. The spread in the 'price' dimension suggests variability in pricing at similar bedroom and bathroom counts, which could be due to other factors like location, amenities, and apartment size."
+                        "The 3D scatter plot provides a visual representation of the relationship between the number of bedrooms and bathrooms against the price. It shows that generally, as the number of bedrooms and bathrooms increases, so does the price. The spread in the 'price' dimension suggests variability in pricing at similar bedroom and bathroom counts, which could be due to other (known/unknown) factors like location and apartment size."
                     )
                 ]
             ),

@@ -65,7 +65,7 @@ def count_plot_3_content():
             html.Div(
                 [
                     html.P(
-                        "The bar chart compares the interest level counts across three months, showing a clear seasonal trend. Interest levels, both low and medium, are highest in June and lower in the preceding months. The high interest levels do not show a significant monthly variation, suggesting that high interest properties are consistently sought after, regardless of the season. This trend could imply that there is more rental activity during the summer months, which is common in real estate markets due to various factors such as the end of the school year and the peak moving season (internship, co-op,...)."
+                        "The bar chart compares the interest level counts across three months, showing a clear summer seasonal trend. Interest levels, both low and medium, are highest in June and lower in the preceding months. The high interest levels do not show a significant monthly variation, suggesting that high interest properties are consistently sought after, regardless of the season. This trend is common in real estate markets due to various factors such as the end of the school year and the peak moving season (internship, co-op,...)."
                     )
                 ]
             ),

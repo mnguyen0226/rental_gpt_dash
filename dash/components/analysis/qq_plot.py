@@ -71,7 +71,7 @@ def qq_plot_content():
             html.Div(
                 [
                     html.P(
-                        "The QQ plot of log-transformed prices shows that the distribution of prices does not perfectly follow a normal distribution, as the points deviate from the red line, especially at the lower and higher quantiles. This suggests that even after a log transformation, there are extreme values in the data. The heavier tails indicate that there is more variability in rental prices than what would be expected in a normal distribution, with a higher occurrence of both very low and very high prices."
+                        "The QQ plot of prices shows that the distribution of prices does not perfectly follow a normal distribution, as the points does not directly fit with the red line, especially at the lower and higher quantiles. This suggests that even after a log transformation (a non-linear transformation), there are extreme values in the data. Indeed that 'prices' does not follow the Gaussian (normal) distribution."
                     )
                 ]
             ),

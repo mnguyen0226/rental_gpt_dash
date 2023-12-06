@@ -58,7 +58,7 @@ def heatmap_content():
             html.Div(
                 [
                     html.P(
-                        "The heatmap displays the correlation matrix for bathrooms, bedrooms, and price. The values, ranging from 0.52 to 0.67, indicate a moderate positive correlation between these features. This means as the number of bedrooms or bathrooms increases, the price tends to increase as well. The strongest correlation is between price and the number of bathrooms, suggesting that the number of bathrooms may be a more significant factor in determining the price than the number of bedrooms. This could be useful for modeling price predictions or understanding what features contribute most to rental costs."
+                        "The heatmap displays the correlation matrix for bathrooms, bedrooms, and price. The values, ranging from 0.52 to 0.67, indicate a moderate positive correlation between these features. This means as the number of bedrooms or bathrooms increases, the price tends to increase as well. There is a strongest correlation between price and the number of bathrooms, suggesting that the number of bathrooms is a more significant factor in determining the price than the number of bedrooms."
                     )
                 ]
             ),

@@ -56,7 +56,7 @@ def reg_plot_3_content():
             html.Div(
                 [
                     html.P(
-                        "The regression plot illustrates a positive correlation between the number of bathrooms in a property and its price. As the number of bathrooms increases, the price also tends to rise. However, the scatter plot reveals that most data points are concentrated at the lower end of the bathroom count, with prices showing a wide range even for properties with the same number of bathrooms. This variability indicates that while the number of bathrooms is a factor in pricing, there are likely other significant factors influencing the price as well. The presence of a few outliers suggests some exceptionally priced properties, potentially luxury units with a high number of bathrooms."
+                        "The regression plot suggests a positive correlation between the number of bedrooms and the price of rental properties. The general trend shows that as the number of bedrooms increases, so does the price. However, there is significant variability in price within properties with the same number of bedrooms, indicating other factors also play a crucial role in determining rental prices, unlike between price and bathrooms."
                     )
                 ]
             ),

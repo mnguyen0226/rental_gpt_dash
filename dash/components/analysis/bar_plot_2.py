@@ -53,7 +53,7 @@ def bar_plot_2_content():
             html.Div(
                 [
                     html.P(
-                        "The bar chart depicting the number of bathrooms in listings shows that one-bathroom units are the most common, followed by two-bathroom units. The frequency of listings sharply decreases as the number of bathrooms increases, with three or more bathrooms being relatively rare. This pattern suggests that the housing market in New York City primarily caters to singles and small families, which is consistent with urban apartment offerings. Properties with a higher number of bathrooms are less common and could potentially cater to a luxury market segment."
+                        "The bar chart indicates the number of bathrooms in listings shows that one-bathroom units are the most common, followed by two-bathroom units. Three or more bathrooms are relatively rare. This pattern suggests that the housing market in New York city primarily adjusts to singles and small families. Properties with a higher number of bathrooms are less common and could potentially offer to a luxury market segment."
                     )
                 ]
             ),

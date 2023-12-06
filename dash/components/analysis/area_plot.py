@@ -67,7 +67,7 @@ def area_plot_content():
             html.Div(
                 [
                     html.P(
-                        "The area plot reveals fluctuations in average listing prices over time across different interest levels. High interest properties generally command higher prices, while low interest properties are clustered at lower price points. The data indicates variability in the rental market, with occasional peaks suggesting the entry of premium listings or seasonal demand surges. The overlap between medium and high interest levels points to price being one of several factors influencing interest. Overall, the market appears dynamic, with prices changing frequently within short intervals."
+                        "The area plot reveals fluctuations in average listing prices over time across different interest levels. High interest properties generally command higher prices, while low interest properties are clustered at lower price points. The data indicates variability in the rental market, with occasional peaks suggesting the entry of premium listings or seasonal demand surges. The overlap between medium and high interest levels points to price being one of several factors influencing interest. Without having to analyse the annual dataset, it's hard to determine seasonality of low, medium, and high interest level."
                     )
                 ]
             ),

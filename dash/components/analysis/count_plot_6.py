@@ -64,7 +64,7 @@ def count_plot_6_content():
             html.Div(
                 [
                     html.P(
-                        "The bar chart indicates the interest level counts segmented by quarters. With only the second quarter shown, there's a significant number of listings with low interest, a moderate amount with medium interest, and relatively few with high interest."
+                        "The bar chart indicates the interest level counts segmented by quarters. With only the second quarter (summer) shown, there's a significant number of listings with low interest, a moderate amount with medium interest, and relatively few with high interest."
                     )
                 ]
             ),

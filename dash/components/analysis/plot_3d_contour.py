@@ -58,7 +58,7 @@ def plot_3d_contour_content():
             html.Div(
                 [
                     html.P(
-                        "The 3D contour plot presents a visual representation of the relationship between the number of bedrooms and bathrooms and the price of rental properties. Peaks in the contour suggest that listings with a higher number of bedrooms and bathrooms tend to have higher prices. This multi-dimensional view allows for a nuanced understanding of how these variables interact. It's notable that prices increase steeply with the number of bathrooms compared to bedrooms, indicating that the presence of additional bathrooms may be a strong indicator of higher-priced listings."
+                        "The 3D contour plot presents a visual representation of the relationship between the number of bedrooms and bathrooms and the price of rental properties. Peaks in the contour suggest that listings with a higher number of bedrooms and bathrooms tend to have higher prices. This 3D view allows for ab understanding of how these variables interact. The steepness (higher prices) in areas with more bathrooms indicates that bathrooms may have a stronger influence on price in this dataset compared to bedrooms."
                     )
                 ]
             ),

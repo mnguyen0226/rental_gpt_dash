@@ -72,7 +72,7 @@ def joint_plot_1_content():
             html.Div(
                 [
                     html.P(
-                        "The joint plot showcases the relationship between the price, the number of bedrooms, and the interest level of listings. The scatter points are color-coded by interest level, indicating that listings with high interest are not necessarily those with the highest price or most bedrooms. It suggests that while there might be a trend for higher prices with more bedrooms, the interest level is influenced by factors beyond just these two. The distribution (marginal histograms) on the top and right show that most listings have fewer bedrooms and a lower price range, with interest level distributed across these factors."
+                        "The joint plot showcases the relationship between the price, the number of bedrooms, and the interest level of listings. The scatter points are color-coded by interest level, indicating that listings with high interest are not necessarily those with the highest price or most bedrooms. It suggests that while there might be a trend for higher prices with more bedrooms, the interest level is influenced by (known/unknown) factors beyond just these two."
                     )
                 ]
             ),

@@ -64,7 +64,7 @@ def count_plot_5_content():
             html.Div(
                 [
                     html.P(
-                        "The bar chart illustrates the interest level counts across weekdays. It shows varying levels of interest for rental listings, with the lowest levels of interest typically on the first day of the week and higher interest levels in the middle of the week. The trend suggests that renters might be more actively looking for listings during mid-week rather than at the beginning or end of the week."
+                        "The bar chart shows the interest level counts across weekdays. It shows the lowest levels of interest typically on the first day of the week and higher interest levels in the middle of the week. The trend suggests that renters might be more actively looking for listings during mid-week rather than at the beginning or end of the week."
                     )
                 ]
             ),

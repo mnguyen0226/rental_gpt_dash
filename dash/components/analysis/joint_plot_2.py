@@ -72,7 +72,7 @@ def joint_plot_2_content():
             html.Div(
                 [
                     html.P(
-                        "The joint plot indicates a positive relationship between the number of bathrooms in a property and its price, color-coded by interest level. While higher-priced listings tend to have more bathrooms, the interest level doesn't seem exclusively higher for these properties, suggesting that factors other than the number of bathrooms and price contribute to the interest level. The density plots on the top and right show the distribution of prices and bathroom counts, respectively, with most properties featuring fewer bathrooms and a lower price range. High-interest listings are scattered across various price points and bathroom counts."
+                        "The joint plot indicates a positive relationship between the number of bathrooms in a property and its price, color-coded by interest level. While higher-priced listings tend to have more bathrooms, the interest level doesn't seem exclusively higher for these properties, which suggests that (known/unknown) factors other than the number of bathrooms and price contribute to the interest level."
                     )
                 ]
             ),

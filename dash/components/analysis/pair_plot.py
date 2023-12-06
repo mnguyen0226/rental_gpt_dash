@@ -61,7 +61,7 @@ def pair_plot_content():
             html.Div(
                 [
                     html.P(
-                        "The pair plot indicates relationships between the number of bathrooms, bedrooms, and price. There appears to be a positive correlation between the number of bathrooms and bedrooms, which is intuitive as larger homes tend to have more of both. The scatter plots also suggest a positive correlation between price and both the number of bedrooms and bathrooms, indicating that as the count of these features increases, so does the price. There are clusters of data points at lower bedroom and bathroom counts, illustrating a higher concentration of smaller and likely more affordable listings."
+                        "The pair plot indicates relationships between the number of bathrooms, bedrooms, and price. There is a positive correlation between the number of bathrooms and bedrooms, which is intuitive as larger homes tend to have more of both. The scatter plots also suggest a positive correlation between price and both the number of bedrooms and bathrooms, indicating that as the count of these features increases, so does the price."
                     )
                 ]
             ),

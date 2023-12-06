@@ -58,7 +58,7 @@ def violin_plot_content():
             html.Div(
                 [
                     html.P(
-                        "The violin plot illustrates the distribution of prices at different interest levels. It shows that lower-priced listings have a wider range of prices and are more commonly found at the 'low' interest level, while the 'high' interest level has a narrower price distribution, indicating that high-interest listings are more consistently priced. The 'medium' interest level shows a price distribution that is somewhat between the 'low' and 'high' interest levels. This could suggest that listings with very high or very low prices do not attract as much interest as those with moderate prices."
+                        "The violin plot shows the distribution of prices at different interest levels. It demonstratd that lower-priced listings have a wider range of prices and are more commonly found at the 'low' interest level, while the 'high' interest level has a narrower price distribution, indicating that high-interest listings are more consistently priced. The 'medium' interest level shows a price distribution that is somewhat between the 'low' and 'high' interest levels."
                     )
                 ]
             ),

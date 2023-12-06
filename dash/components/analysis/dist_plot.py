@@ -69,7 +69,7 @@ def dist_plot_content():
             html.Div(
                 [
                     html.P(
-                        "The distribution plot of rental prices, with a KDE overlay, indicates that the distribution of prices is right-skewed, meaning there are a number of higher-priced listings pulling the mean above the median. The median price is a better indicator of the central tendency for this dataset due to the skew. The skewness in the price distribution suggests that while most of the rentals are at a lower price point, there are enough premium-priced rentals to skew the average price higher. This could be indicative of a market with diverse rental options, catering to both budget and luxury segments."
+                        "The distribution plot of rental prices, with a KDE overlay, indicates that the distribution of prices is right-skewed, meaning there are a number of higher-priced listings pulling the mean above the median. The median price is a better indicator of the central tendency for this dataset due to the skew. The skewness in the price distribution suggests that while most of the rentals are at a lower price point, there are enough premium-priced rentals to skew the average price higher."
                     )
                 ]
             ),

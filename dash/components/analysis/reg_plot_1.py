@@ -56,7 +56,7 @@ def reg_plot_1_content():
             html.Div(
                 [
                     html.P(
-                        "The regression plot with scatter representation shows a positive correlation between the number of bathrooms and bedrooms in rental listings. The trend line suggests that as the number of bathrooms increases, the number of bedrooms typically increases as well. Most data points cluster at the lower end of both axes, indicating that listings with fewer bedrooms and bathrooms are more common. There are some outliers with a high number of bathrooms compared to bedrooms, which may represent unique or luxury properties."
+                        "The regression plot with scatter representation shows a positive correlation between the number of bathrooms and bedrooms in rental listings. The trend line suggests that as the number of bathrooms increases, the number of bedrooms typically increases as well. Most data points cluster at the lower end of both axes, indicating that listings with fewer bedrooms and bathrooms are more common."
                     )
                 ]
             ),

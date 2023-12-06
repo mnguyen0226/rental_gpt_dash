@@ -50,7 +50,7 @@ def pie_chart_content():
             html.Div(
                 [
                     html.P(
-                        "The pie chart presents the distribution of interest levels across rental listings. A large majority of the listings have a low interest level, while a smaller fraction have medium interest, and only a very small percentage show high interest. This distribution suggests that most of the listings fail to engage potential renters, which could be due to various factors like price, location, features, or listing quality. The low percentage of high interest listings may indicate a competitive market where only a few listings stand out enough to attract a high volume of potential renters."
+                        "The pie chart presents the distribution of interest levels across rental listings. A large majority of the listings have a low interest level, while a smaller fraction have medium interest, and only a very small percentage show high interest. This distribution could be due to various factors like price, location, features, or listing quality. The low percentage of high interest listings may indicate a competitive market where only a few listings stand out enough to attract a high volume of potential renters in New York city."
                     )
                 ]
             ),

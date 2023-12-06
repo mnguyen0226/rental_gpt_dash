@@ -64,7 +64,7 @@ def count_plot_4_content():
             html.Div(
                 [
                     html.P(
-                        "The bar chart indicates daily interest level counts within a month. Interest levels fluctuate throughout the month, with some days showing pronounced peaks in medium and low interest. These peaks could correlate with specific days of the week or month, such as weekends or mid-month, which are often associated with increased rental activity. The consistent presence of high-interest listings across days suggests a steady demand for certain properties."
+                        "The bar chart indicates daily interest level counts within a month. Interest levels fluctuate throughout the month, with some days showing notable peaks in medium and low interest. However, it seems like within the summer, the interest-levels are even throughout the days in a month."
                     )
                 ]
             ),

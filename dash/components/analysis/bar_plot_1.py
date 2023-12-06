@@ -53,7 +53,7 @@ def bar_plot_1_content():
             html.Div(
                 [
                     html.P(
-                        "The bar chart shows the frequency of listings by the number of bedrooms. One-bedroom and two-bedroom apartments are the most common, with a significant drop-off in the number of listings as the number of bedrooms increases. Ranked 3rd is studio. This distribution is typical of urban housing markets, where smaller living spaces are more prevalent. The data suggests that single individuals or small families might be the primary target demographic for the rental market in New York City. Properties with more than three bedrooms are considerably less common, which may indicate a lower demand or a smaller supply of larger apartments."
+                        "The bar chart shows the frequency of listings by the number of bedrooms. One-bedroom and two-bedroom apartments are the most common, with a significant drop-off in the number of listings as the number of bedrooms increases. Ranked 3rd is studio. The data suggests that single individuals or small families might be the primary target demographic for the rental market in New York city. Properties with more than three bedrooms are considerably less common, which may indicate a lower demand or a smaller supply of larger apartments as well."
                     )
                 ]
             ),

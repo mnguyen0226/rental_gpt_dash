@@ -83,7 +83,7 @@ def line_plot_content():
             html.Div(
                 [
                     html.P(
-                        "The line plot shows the price trend over time suggesting that rental prices fluctuate but do not exhibit a clear long-term trend in the given timeframe. There are spikes in rental prices that could correspond to specific events or seasonal demand changes. However, since we don't have an entire year-dataset, it's hard to determine the seasonality of the price trends."
+                        "The line plot shows the price trend over time suggesting that rental prices fluctuate but do not exhibit a clear long-term trend in the given timeframe, which is sensible as our dataset is only 3-month long. There are spikes in rental prices that could correspond to specific events or seasonal demand changes. However, since we don't have an entire year-dataset, it's hard to determine the seasonality of the price trends for New York city apartments."
                     )
                 ]
             ),

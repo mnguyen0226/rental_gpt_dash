@@ -64,7 +64,7 @@ def count_plot_1_content():
             html.Div(
                 [
                     html.P(
-                        "The bar chart illustrates the counts of interest levels for rental listings throughout different hours of the day. There is a notable peak in activity during the early hours (likely around midnight), with a high volume of low-interest levels. Interest levels taper off during the early morning hours and start to rise again around conventional working hours. High interest seems proportionally higher during the night, possibly indicating a time when serious renters are more active. The trend suggests that listing visibility and engagement could be optimized by timing postings to coincide with these peak hours."
+                        "The bar chart indicates the counts of interest levels for rental listings throughout different hours of the day. There is a notable peak in activity during the early hours (likely around midnight), with a high volume of low-interest levels. Interest levels is low during early morning and start to rise again during work hours. Meanwhile, high interest is high during night indicating serious renters are active"
                     )
                 ]
             ),
