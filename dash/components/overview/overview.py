@@ -344,9 +344,9 @@ def card():
                 ],
                 className="mb-4",
             ),
-            html.Br(),
-            html.Hr(),
-            html.H3("📱Mobile App"),
+            # html.Br(),
+            # html.Hr(),
+            # html.H3("📱Mobile App"),
         ],
     )
     return layout
