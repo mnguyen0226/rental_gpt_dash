@@ -1,27 +1,10 @@
-# Property Rental Interest Prediction Web App
-A software to predict how popular an apartment retal listing based onthe listing content like text description, photos, number of bedrooms, price,.... The data is provided from renthop.com, an apartment listing site with the apartments are located in New York City. Specifically, for a listing_id, we want to know whether the customer has a `low`, `medium`, or `high` interest.
+# RentalGPT Dash App
+I presents the data analysis, data visualization, and Dash application development called "RentalGPT", an interactive, user friendly dashboard that provides services to multiple stakeholders. Using the "Two Sigma Connect: Rental Listing Inquiries" dataset collected from Kaggle, we can do in-depth data analysis, interactive data visualization, and an app that has predictive analytics and virtual assistance.
 
-Research Questions:
-- 2. Model 1: Based on the tabular input of the user (without extracted features from image), can we predict the interest level. 
-  - Customer: Agent
-  - Classical ML.
-- 3. Model 2: Based on the tabular input of the user and the image, can we predict the interest level.
-  - Customer: Agent
-  - Yolo
-  - Classical ML
-  - Dataset with images only
-- 4. Model 3: Based on the input data, can we generate the image of the room?
-  - Fine-tune Deep Learning
-  - Customer: Agent
-- 5. Model 4: Usage of ChatGPT 
-  - Customer: Renter
-  - Customer service bot to answer the FAQs about the NYC rental market using the dataset as knowledge base and analysis.
-  - Hard: from the chat, provide the listing of the relevant property to select?
-    - https://www.youtube.com/watch?v=EE1Y2enHrcU
-    - https://www.youtube.com/watch?v=4qNwoAAfnk4&t=17s
+## Data Science Life Cycle
+![](https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/data_science_life_cycle.png)
 
-## About
-### Dataset
+### Business Understanding & Data Acquisition
 The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-connect-rental-listing-inquiries/data?select=train.json.zip)).
 - `train.json`: the training set.
 - `images_sample.zip`: listing images organized by listing_id (a sample of 100 listings)
@@ -29,153 +12,117 @@ The datasets can be found [here]((https://www.kaggle.com/competitions/two-sigma-
 
 **Note**: for this project, we will consider the training dataset as a full-dataset, as our goal is not to beat the competition, but to build a tool for data analysis and usages.
 
-## Development Phases
+### Data Processing & Feature Engineering
+Using various techniques
+- Tabular Feature Extraction.
+- Sentimental Extraction via HuggingFace's pretrained BERT (benchmark on SST dataset).
+- Image Feature Extraction via PyTorch's YOLO.v5.
 
-### Phase 1. EDA [ANALYSIS] - DONE
-- Explore the dataset, reveal underlying information by plotting static plots for the following feature type, and preprocess the dataset.
+Codebase:
+- 
 
+### EDA
+Explore the dataset, reveal underlying information by plotting static plots for processed features. Here's the list of analysis: `outlider detection & removal`, `PCA`, `statistical test` (K-S, Shapiro-Witt, D'K^2), `Bar plot`, `Count plot`, `Pie chart`, `Distribution plot`, `Pair plot`, `Heatmap`, `Histogram with KDE`, `QQ plot`, `KDE`, `Regression plot with scatter representation and regression line`, `Boxen plot`, `Area plot`, `Violin plot`, `Joint plot with KDE and scatter representation`, `Rug plot`, `3D plot`, `Contour plot`, `Cluster map`, `Hexbin`, `Strip plot`, `Swarm plot`, `Subplots`.
 
-### Phase 2. Data Processing [ANALYSIS] - DONE
-- Data preprocessing with Pretrained model
-  - Sentimental Extraction.
-  - Feature Extraction
-  - Image Feature Extraction
+Codebase:
 
-### Phase 3. ML Modeling [ANALYSIS] - DONE
-- **Model 1**: Based on the tabular input of the user (without extracted features from image), can we predict the interest level. 
-  - Customer: Agent
-  - Classical ML.
-- **Model 2**: Based on the tabular input of the user and the image, can we predict the interest level.
-  - Customer: Agent
-  - Yolo
-  - Classical ML
-  - Dataset with images only
-- **Model 3**: Based on the tabular input of the user (without extracted features from image), can we predict the price. 
-  - Customer: Agent + Renter
-  - Classical ML.
-- **Model 4**: Based on the tabular input of the user and the image, can we predict the price.
-  - Customer: Agent
-  - Yolo
-  - Classical ML
-  - Dataset with images only
+### ML Modeling
+I used Sklearn's SVM, Decision Tree, Random Forest, MLP, KNN.
 
-### Phase 4. Dash Visualization Development [UI + ANALYSIS] - DONE
-- **TODO** - DCC:
-  - Check list
-  - RadioItem
-  - Loading
-  - RangeSlider
-  - Slider
-  - Tooltips
-  - Figure
-  - Label
+**Type 1**: Based on the tabular input of the user (without extracted features from image), can we predict the interest level. 
 
+Codebase:
+-
 
-- **TODO from report**: Dataset analysis, convert all to plotly.
-  - PCA
-  - Normality Test
-  - Pearson Correlation Matris
-  - Statistic
+**Type 2**: Based on the tabular input of the user and the image, can we predict the interest level.
 
-- Map Visualization Based On Interest: Use dash-leaflet or plotly.express to plot rental listings on a map. Users could filter by price range, number of bedrooms/bathrooms, or interest level.
-  - Slider
-- Price Change Based on Interest: Interactive histograms or KDE plots for price where users can filter based on number of bedrooms, bathrooms, or location.
+Codebase:
 
-### Phase 5. Real-time Prediction (data, image) with Flask [UI] - Done
-- **Model 1**: Based on the tabular input of the user (without extracted features from image), can we predict the interest level. 
-  - Customer: Agent
-  - Classical ML.
-- **Model 2**: Based on the tabular input of the user and the image, can we predict the interest level.
-  - Customer: Agent
-  - Yolo
-  - Classical ML
-  - Dataset with images only
-- **Model 3**: Based on the tabular input of the user (without extracted features from image), can we predict the price. 
-  - Customer: Agent + Renter
-  - Classical ML.
-- **Model 4**: Based on the tabular input of the user and the image, can we predict the price.
-  - Customer: Agent
-  - Yolo
-  - Classical ML
-  - Dataset with images only
+**Type 3**: Based on the tabular input of the user (without extracted features from image), can we predict the price. 
 
-### Phase 6. Chatbot Development - Done
-- **Model 5**: Usage of ChatGPT 
-  - Customer: Renter
-  - Customer service bot to answer the FAQs about the NYC rental market using the dataset as knowledge base and analysis.
-  - Hard: from the chat, provide the listing of the relevant property to select?
+Codebase:
 
-- About [HugChat API](https://github.com/Soulter/hugging-chat-api)
-  - From HugChat Port: AI is an area of active research with known problems such as biased generation and misinformation. Do not use this application for high-stakes decisions or advice. Your conversations will be shared with model authors.
-  - How to add secret: aka your hugging face account: https://docs.streamlit.io/library/advanced-features/secrets-management
-  - [Tutorial](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)
-  - [Source Code](https://github.com/dataprofessor/hugchat/blob/master/app_v3.py)
-  - [YT Tutorial](https://www.youtube.com/watch?v=T_iE6TT7pS8)
-  - HugChat is Unofficial HuggingChat Python API, extensible for chatbots etc.
-  - [HuggingChat About](https://www.youtube.com/watch?v=7QChacb3-00)
-    - Fully Open-source
-    - Powered by Open Assistant's latest model - the best open source chat model: [oasst-sft-6-llama-30b](https://huggingface.co/OpenAssistant/oasst-sft-6-llama-30b-xor) 30 billion dataset
-    - The chatbot use the Huggingface UI. The performance is not as great as ChatGPT. This is an alternative.
-    - OpenAssistant dataset is human annotated, which make the conversation more natural.
-  - [Open Assistant](https://open-assistant.io/) biggest open LLM
-    - [Explained by WorldOfAI](https://www.youtube.com/watch?v=U-8Sicu-agc)
-      - Open Assistnat is a chat-based assistant that understands tasks, can interacct with 3rd party systems and retrieve info dynamically to do so. It can be extended and personalized easily and is developed as free, open-source software.
-      - Company is called LAOIN (Large-scale AI Open Network).
-      - 
-  - [Llama About]()
+**Type 4**: Based on the tabular input of the user and the image, can we predict the price.
 
-- [Dash with ChatGPT](https://github.com/plotly/dash-sample-apps/blob/main/apps/dash-gpt3-chatbot/app.py)
-- [Hug-Chat](https://github.com/Soulter/hugging-chat-api/tree/master)
-- [Hug-Chat Example](https://github.com/dataprofessor/hugchat/blob/master/app_v3.py)
+Codebase:
 
-- Note: 
-  - Predict features
-  - Reset Bot
+### Dash App
+![](https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/rental_gpt_dash_architecture.png)
 
+## How to  Run
 
-### Phase: Property Filtering
-- Interactive Table: Display a searchable and filterable table of listings where users can sort by different features like price, number of bedrooms, or interest level.
-  - Filtered by listing...
+## Deployment
+### Deployment on GCP
+1. Make sure you have a GCP account with some credit amount.
+2. Go to Google Cloud Console > Create a New Project > Activate Cloud Shell
+3. Create a new project
+4. On the terminal, type `python3 -m venv .venv` to create a new Python environment.
+5. On the terminal, type `. .venv/bin/activate` to activate your newly created environment.
+6. Open Editor, add code for app.py, requirements.txt, Dockerfile.
+7. On the terminal, install package via `pip install -r requirements.txt`
+8. On the terminal, enable services through GCP terminal: `gcloud services enable
+containerregistry.googleapis.com`
+9. On the terminal, enable permission via `gcloud auth configure-docker`
+10. On the terminal, build your docker image via `docker build -f Dockerfile -t
+gcr.io/your-project/test:test .`
+11. On the terminal, push your docker image via `docker push gcr.io/your-project/test:test`
+12. On the terminal, deploy your application via `gcloud run deploy dashapp --image
+gcr.io/your-project/test:test`
+13. Your application has been successfully deployed!
 
-### Phase 9. Deploy
-- Will the docerization and running will actually work as the ml is trained on different environment while the model is run on different environment?
-- Route of models to different folder
-- Try to deploy with without database first
-
-docker build -t mnguyen0226/rental_gpt_dash .
-
-### Phase 7. Mobile Development [UI + UX]
-- Task 1: Upload images and make prediction (help buyer evaluate the house).
-- Task 2: Image generation based on input (help client the house)
-
-### Phase 8. PyTest 
-
-### **TODO** Designs & Repo Clean Up
-- Design:
-  - Static + Dynamic: https://dash-molstar.everburstsun.net/drugs
-  - Prediction: https://dash-molstar.everburstsun.net/drugs
-  - ChatGPT: https://biomedical.dev6.rightinformation.com/genomic-analysis with listing
-- All renthop image is online so we can do filtering
-- ChatGPT for listing, theres a button to "List top 5" to do api call making prediction on number of room... then filter.
-- **Can you prepare a document that shows the steps on the deployment process through VT server instead of GCP?**
-- Add instruction and notes for each tab
-- Test build on another python environment (for submission)
-- **Share to BlackRock**
-- Add image Rental Cost + Hide Info
-- About: Me, Architecture, Technology I Used
-
-### Phase 10. Report & Presentation
-- Create a python file for EDA
-
-
-## Architecture
-
-## Reproduction
+### Deployment on Virginia Tech's Kubernetes Rancher
+1. Consider reading through the Documentation - Cloud Quickstart.
+2. Make sure you have DockerHub account and access to Virginia Tech's Kubernetes
+Rancher (cloud.cs.vt.edu).
+3. Make sure you have Docker Desktop installed locally. Open Docker Desktop and sign in
+with your DockerHub to enable Docker daemon to run on the background.
+4. On the terminal, build your docker image via `docker build -t
+your-dockerhub-username/project-name .`
+5. On the terminal, push your docker image via `docker push
+your-dockerhub-username/project-name`
+6. After granted access to cloud.cs.vt.edu via asking admin, create your Workload with the
+port that you set on Dockerfile. The name of the image for the server to pull should also
+be filled in here (such as your-dockerhub-username/project-name). Here, you can also
+define your domain name.
+7. Now, create the ingress, and select your workload. Activate 1 pod to initialize and run
+your application.
+8. Your application has been successfully deployed!
 
 ## Demo
+### Overview Page
+![](https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/overview_page.png)
+
+### Apartments Listing Page
+![](https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/apartments_listing_page.png)
+
+### Data Analysis Page
+![](https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/data_analysis_page.png)
+
+### Data Visualization Page
+![](https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/data_visualization_page.png)
+
+### Interest Level Predicion Page
+![](https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/interest_level_prediction_page.png)
+
+### Rental Cost Prediction
+![](https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/rental_cost_prediction_page.png)
+
+### Virtual Assistant Page
+![](https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/virtual_assistant_page.png)
+
 
 ## Presentation & Report
+[Presentation]()
+
+[Report]()
 
 ## References
 [1] “Two Sigma Connect: Rental Listing Inquiries | Kaggle,” Kaggle.com, 2023. https://www.kaggle.com/competitions/two-sigma-connect-rental-listing-inquiries/data?select=train.json.zip (accessed Nov. 23, 2023).
-‌
+‌[2] [Huging Chat API](https://github.com/Soulter/hugging-chat-api)
+[3] [HugChat Chatbot with Streamlit Blog](https://blog.streamlit.io/how-to-build-an-llm-powered-chatbot-with-streamlit/)
+[4] [HugChat Chatbot with Streamlit Code](https://github.com/dataprofessor/hugchat/blob/master/app_v3.py)
+[5] [OpenAssistant LLaMA 30B SFT 6](https://huggingface.co/OpenAssistant/oasst-sft-6-llama-30b-xor)
+[6] [HuggingChat - New Open Source Alternative to ChatGPT](https://www.youtube.com/watch?v=7QChacb3-00)
+[7] [Open Assistant](https://open-assistant.io/)
+[8] [Dash with ChatGPT Code](https://github.com/plotly/dash-sample-apps/blob/main/apps/dash-gpt3-chatbot/app.py)
+[9] [HugChat API Repository](https://github.com/Soulter/hugging-chat-api/tree/master)
