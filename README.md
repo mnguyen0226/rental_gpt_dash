@@ -18,41 +18,33 @@ Using various techniques
 - Sentimental Extraction via HuggingFace's pretrained BERT (benchmark on SST dataset).
 - Image Feature Extraction via PyTorch's YOLO.v5.
 
-Codebase:
+[Notebooks](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/notebooks)
 
 ### EDA
 Explore the dataset, reveal underlying information by plotting static plots for processed features. Here's the list of analysis: `outlider detection & removal`, `PCA`, `statistical test` (K-S, Shapiro-Witt, D'K^2), `Bar plot`, `Count plot`, `Pie chart`, `Distribution plot`, `Pair plot`, `Heatmap`, `Histogram with KDE`, `QQ plot`, `KDE`, `Regression plot with scatter representation and regression line`, `Boxen plot`, `Area plot`, `Violin plot`, `Joint plot with KDE and scatter representation`, `Rug plot`, `3D plot`, `Contour plot`, `Cluster map`, `Hexbin`, `Strip plot`, `Swarm plot`, `Subplots`.
 
-Codebase:
+[Notebooks](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/notebooks), [Codebase](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/eda)
 
 ### ML Modeling
 I used Sklearn's SVM, Decision Tree, Random Forest, MLP, KNN.
+- **Type 1**: Based on the tabular input of the user (without extracted features from image), can we predict the interest level. 
+- **Type 2**: Based on the tabular input of the user and the image, can we predict the interest level.
+- **Type 3**: Based on the tabular input of the user (without extracted features from image), can we predict the price. 
+- **Type 4**: Based on the tabular input of the user and the image, can we predict the price.
 
-**Type 1**: Based on the tabular input of the user (without extracted features from image), can we predict the interest level. 
-
-Codebase:
-
-**Type 2**: Based on the tabular input of the user and the image, can we predict the interest level.
-
-Codebase:
-
-**Type 3**: Based on the tabular input of the user (without extracted features from image), can we predict the price. 
-
-Codebase:
-
-**Type 4**: Based on the tabular input of the user and the image, can we predict the price.
-
-Codebase:
+[Notebooks](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/notebooks)
 
 ### Dash App
 ![](https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/rental_gpt_dash_architecture.png)
 
+[Codebase](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/dash)
+
 ## How to  Run
-*Instructions to run Dash app can be found [here](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/dash).
+Instructions to run Dash app can be found [here](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/dash).
 
-Instructions run EDA scripts can be found [here]().
+Instructions run EDA scripts can be found [here](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/eda).
 
-Pre-run notebooks with results can be found [here](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/notebooks)
+Pre-run notebooks with results can be found [here](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/notebooks).
 
 Instructions to run HuggingFace Chatbot with Dash template can be found [here](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/experimentation/dash_llama_chatbot).
 
