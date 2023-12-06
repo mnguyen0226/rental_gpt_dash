@@ -1,3 +1,3 @@
-A software to predict how popular an apartment retal listing based onthe listing content like text description, photos, number of bedrooms, price,.... The data is provided from renthop.com, an apartment listing site with the apartments are located in New York City. Specifically, for a listing_id, we want to know whether the customer has a `low`, `medium`, or `high` interest.
+Source code of the project can be found [here](https://github.com/mnguyen0226/rental_gpt_dash/tree/main).
 
 If you have any feedbacks or recommendations, feel free to contact **Minh T. Nguyen** (`mnguyen0226@vt.edu`).

@@ -66,16 +66,33 @@ def about_layout():
                 ],
             ),
             card(),
+            html.Br(),
             html.Hr(),
             html.H3(
-                "System Architecture",
+                "Data Science Life Cycle",
                 style={"textAlign": "center", "color": "#082446"},
             ),
             html.Br(),
             html.Img(
-                src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/content/posts/mathbridge/imgs/mathbridge_architecture.png",
+                src="https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/data_science_life_cycle.png",
                 style={
-                    "width": "1000px",
+                    "width": "1200px",
+                    "display": "block",
+                    "margin-left": "auto",
+                    "margin-right": "auto",
+                },
+            ),
+            html.Br(),
+            html.Hr(),
+            html.H3(
+                "Architecture Design",
+                style={"textAlign": "center", "color": "#082446"},
+            ),
+            html.Br(),
+            html.Img(
+                src="https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/rental_gpt_dash_architecture.png",
+                style={
+                    "width": "800px",
                     "display": "block",
                     "margin-left": "auto",
                     "margin-right": "auto",
