@@ -48,6 +48,17 @@ Codebase:
 ![](https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/rental_gpt_dash_architecture.png)
 
 ## How to  Run
+*Instructions to run Dash app can be found [here](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/dash).
+
+Instructions run EDA scripts can be found [here]()
+
+Pre-run notebooks with results can be found [here](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/notebooks)
+
+Instructions to run HuggingFace Chatbot with Dash template can be found [here](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/experimentation/dash_llama_chatbot)
+
+Instructions to run Interest-Level Prediction with Dash template can be found [here](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/experimentation/interest_level_prediction_with_images)
+
+Instructions to run Interest-Level Prediction with Dash template can be found [here](https://github.com/mnguyen0226/rental_gpt_dash/tree/main/experimentation/streamlit_llama_chatbot)
 
 ## Deployment
 ### Deployment on GCP
