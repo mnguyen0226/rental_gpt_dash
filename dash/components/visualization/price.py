@@ -56,7 +56,6 @@ def price_content():
     )
 
 
-# Callback to update line_plot based on dropdown selection
 @my_app.callback(
     Output("visualization_price_line_plot", "figure"),
     [Input("visualization_price_dropdown", "value")],

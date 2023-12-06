@@ -109,6 +109,7 @@ def chatbot_layout():
     prevent_initial_call=True,
 )
 def update_chat(send_n_clicks, reset_n_clicks, message, chat_history):
+    # reference: https://github.com/Soulter/hugging-chat-api
     ctx = dash.callback_context
     if not ctx.triggered:
         button_id = "No clicks yet"
@@ -149,6 +150,7 @@ def create_message_div(message, sender="user"):
 
 
 def handle_hugchat_logic(email, password, user_message):
+    # reference: https://github.com/Soulter/hugging-chat-api
     try:
         # perform login to HugChat
         login = Login(email, password)

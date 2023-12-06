@@ -56,7 +56,6 @@ def map_content():
     )
 
 
-# Callback to update heatmap based on dropdown selection
 @my_app.callback(
     Output("visualization_map_heatmap", "figure"),
     [Input("visualization_map_dropdown", "value")],
@@ -69,8 +68,8 @@ def update_heatmap(selected_interest):
         lon="longitude",
         z="price",
         radius=8,
-        center=dict(lat=40.7128, lon=-74.0060),  # Center on NYC
-        zoom=9,  # Zoom level to focus on NYC
+        center=dict(lat=40.7128, lon=-74.0060),  # center on NYC
+        zoom=9, 
         mapbox_style="open-street-map",
     )
 
