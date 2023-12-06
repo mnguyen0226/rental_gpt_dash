@@ -6,7 +6,7 @@ Due to the lacked of data and poor performance of the trained model, I have deci
 ## How to run
 On your terminal, create a new python environment.
 ```
-conda create -n predict_img_dash
+conda create -n predict_img_dash python=3.8
 conda activate predict_img_dash
 ```
 

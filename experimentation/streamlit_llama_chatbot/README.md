@@ -6,7 +6,7 @@
 ## How to run
 On your terminal, create a new python environment.
 ```
-conda create -n hugchat_streamlit
+conda create -n hugchat_streamlit python=3.8
 conda activate hugchat_streamlit
 ```
 

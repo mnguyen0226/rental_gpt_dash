@@ -4,7 +4,7 @@
 ## How to run
 On your terminal, create a new python environment.
 ```
-conda create -n hugchat_dash
+conda create -n hugchat_dash python=3.8
 conda activate hugchat_dash
 ```
 

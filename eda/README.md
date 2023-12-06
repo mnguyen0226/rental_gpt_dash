@@ -3,7 +3,7 @@
 ## How to run
 On your terminal, create a new python environment.
 ```
-conda create -n eda
+conda create -n eda python=3.8
 conda activate eda
 ```
 

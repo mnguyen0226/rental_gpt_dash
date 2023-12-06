@@ -3,13 +3,14 @@
 ## How to run
 On your terminal, create a new python environment.
 ```
-conda create -n rental_gpt_app
+conda create -n rental_gpt_app python=3.8
 conda activate rental_gpt_app
 ```
 
 On your terminal, install all package.
 ```
 pip install -r requirements.txt
+pip install gunicorn
 ```
 
 On your terminal, run the dash application via Bash.
