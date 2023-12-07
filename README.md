@@ -75,7 +75,7 @@ Instructions to run Interest-Level Prediction with Dash template can be found [h
 ![](https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/virtual_assistant_page.png)
 
 ## Presentation & Report
-[Presentation]()
+[Presentation](https://drive.google.com/file/d/1HcpBD1MUuS_IeT_DyAOe_HxpaHu78R9W/view?usp=sharing)
 
 [Report](https://github.com/mnguyen0226/rental_gpt_dash/blob/main/docs/report.pdf)
 
