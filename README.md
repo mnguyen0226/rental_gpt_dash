@@ -77,7 +77,7 @@ Instructions to run Interest-Level Prediction with Dash template can be found [h
 ## Presentation & Report
 [Presentation]()
 
-[Report]()
+[Report](https://github.com/mnguyen0226/rental_gpt_dash/blob/main/docs/report.pdf)
 
 ## References
 [1] “Two Sigma Connect: Rental Listing Inquiries | Kaggle,” Kaggle.com, 2023. https://www.kaggle.com/competitions/two-sigma-connect-rental-listing-inquiries/data?select=train.json.zip (accessed Nov. 23, 2023).
