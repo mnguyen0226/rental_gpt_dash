@@ -65,7 +65,7 @@ Instructions to run Interest-Level Prediction with Dash template can be found [h
 ### Data Visualization Page
 ![](https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/data_visualization_page.png)
 
-### Interest Level Predicion Page
+### Interest Level Prediction Page
 ![](https://raw.githubusercontent.com/mnguyen0226/rental_gpt_dash/main/dash/assets/photos/interest_level_prediction_page.png)
 
 ### Rental Cost Prediction
