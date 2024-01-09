@@ -168,7 +168,7 @@ def right_side():
             dcc.Loading(
                 id="loading-cards",
                 children=[html.Div(id="listing_cards_container")],
-                type="circle",
+                # type="circle",
             )
         ]
     )
