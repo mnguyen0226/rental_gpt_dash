@@ -28,7 +28,7 @@ def map_layout():
     layout = html.Div(
         [
             dcc.Loading(
-                children=[dcc.Graph(id="visualization_map_heatmap")], type="circle"
+                children=[dcc.Graph(id="visualization_map_heatmap")],
             ),
         ]
     )

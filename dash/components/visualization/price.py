@@ -28,7 +28,7 @@ def price_layout():
     layout = html.Div(
         [
             dcc.Loading(
-                children=[dcc.Graph(id="visualization_price_line_plot")], type="circle"
+                children=[dcc.Graph(id="visualization_price_line_plot")],
             ),
         ]
     )

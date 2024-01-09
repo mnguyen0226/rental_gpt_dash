@@ -32,7 +32,6 @@ def line_plot_layout():
                     ),
                     dcc.Graph(id="analysis_line_price_graph"),
                 ],
-                type="circle",
             )
         ]
     )

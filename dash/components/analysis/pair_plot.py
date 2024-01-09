@@ -48,7 +48,7 @@ fig.update_layout(
 def pair_plot_layout():
     layout = html.Div(
         [
-            dcc.Loading(children=[dcc.Graph(figure=fig)], type="circle"),
+            dcc.Loading(children=[dcc.Graph(figure=fig)]),
         ]
     )
     return layout

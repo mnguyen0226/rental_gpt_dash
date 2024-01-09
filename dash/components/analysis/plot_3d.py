@@ -46,7 +46,7 @@ fig.update_layout(
 def plot_3d_layout():
     layout = html.Div(
         [
-            dcc.Loading(children=[dcc.Graph(figure=fig)], type="circle"),
+            dcc.Loading(children=[dcc.Graph(figure=fig)]),
         ]
     )
     return layout

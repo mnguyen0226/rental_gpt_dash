@@ -51,7 +51,7 @@ fig.update_layout(
 def count_plot_1_layout():
     layout = html.Div(
         [
-            dcc.Loading(children=[dcc.Graph(figure=fig)], type="circle"),
+            dcc.Loading(children=[dcc.Graph(figure=fig)]),
         ]
     )
     return layout
