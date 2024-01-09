@@ -1,4 +1,5 @@
 # dash imports
+import dash
 from dash import html
 from dash import Input
 from dash import Output
@@ -33,6 +34,42 @@ def ml_content():
             ),
             html.Br(),
             html.Br(),
+            dbc.Button(
+                "Predict Interest Level",
+                color="success",
+                className="me-1",
+                id="ilp_ml_predict_button",
+                n_clicks=0,
+            ),
+            html.Br(),
+            html.Br(),
+            html.Div(
+                [
+                    dbc.Modal(
+                        [
+                            dbc.ModalHeader(dbc.ModalTitle("Prediction Result")),
+                            dbc.ModalBody(html.Div(id="ilp_ml_prediction_output")),
+                            dbc.ModalFooter(
+                                dbc.Button(
+                                    "Close",
+                                    id="ilp_ml_close_modal",
+                                    className="ml-auto",
+                                )
+                            ),
+                        ],
+                        id="ilp_ml_modal",
+                        is_open=False,
+                    ),
+                ]
+            ),
+        ]
+    )
+    return layout
+
+
+def ml_layout():
+    return html.Div(
+        [
             html.Div([html.H3("🏘️ Enter Apartment Preference")]),
             # slider for each feature
             html.Label("Number of Bathrooms", style={"fontWeight": "bold"}),
@@ -171,39 +208,18 @@ def ml_content():
                 ],
                 value=1,
             ),
-            html.Br(),
-            dbc.Button(
-                "Predict Interest Level",
-                color="success",
-                className="me-1",
-                id="ilp_ml_predict_button",
-                n_clicks=0,
-            ),
-        ]
-    )
-    return layout
-
-
-def ml_layout():
-    return html.Div(
-        [
-            html.Div([html.H3("👇 Result")]),
-            html.Div(
-                [
-                    dcc.Loading(
-                        children=[html.Div(id="ilp_ml_prediction_output")],
-                        type="circle",
-                    ),
-                ]
-            ),
         ]
     )
 
 
 @my_app.callback(
-    Output("ilp_ml_prediction_output", "children"),
-    [Input("ilp_ml_predict_button", "n_clicks")],
+    [Output("ilp_ml_modal", "is_open"), Output("ilp_ml_prediction_output", "children")],
     [
+        Input("ilp_ml_predict_button", "n_clicks"),
+        Input("ilp_ml_close_modal", "n_clicks"),
+    ],
+    [
+        State("ilp_ml_modal", "is_open"),
         State("ilp_ml_model_selector", "value"),
         State("ilp_ml_bathrooms_slider", "value"),
         State("ilp_ml_bedrooms_slider", "value"),
@@ -220,8 +236,10 @@ def ml_layout():
         State("ilp_ml_fitness_slider", "value"),
     ],
 )
-def predict(
-    n_clicks,
+def toggle_modal(
+    n_clicks_predict,
+    n_clicks_close,
+    is_open,
     selected_model,
     bathrooms,
     bedrooms,
@@ -237,7 +255,14 @@ def predict(
     fee,
     fitness,
 ):
-    if n_clicks > 0:
+    ctx = dash.callback_context
+
+    if not ctx.triggered:
+        button_id = "No clicks yet"
+    else:
+        button_id = ctx.triggered[0]["prop_id"].split(".")[0]
+
+    if button_id == "ilp_ml_predict_button" and n_clicks_predict:
         cols = [
             "bathrooms",
             "bedrooms",
@@ -276,10 +301,20 @@ def predict(
 
         model = models[selected_model]
         prediction = model.predict(input_data)
-        interest_level = {1: "High", 0: "Medium", -1: "Low"}
-        return f"Predicted Interest Level: {interest_level[prediction[0]]}"
+        interest_level = {
+            1: "High",
+            0: "Medium",
+            -1: "Low",
+        }
+        prediction_text = (
+            f"Predicted Customer's Interest Level: {interest_level[prediction[0]]}"
+        )
+        return True, prediction_text
 
-    return ""
+    elif button_id == "ilp_ml_close_modal" and n_clicks_close:
+        return False, ""
+
+    return is_open, ""
 
 
 def ml_info():

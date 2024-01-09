@@ -69,7 +69,7 @@ def update_heatmap(selected_interest):
         z="price",
         radius=8,
         center=dict(lat=40.7128, lon=-74.0060),  # center on NYC
-        zoom=9, 
+        zoom=9,
         mapbox_style="open-street-map",
     )
 

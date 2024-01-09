@@ -145,12 +145,12 @@ def card():
                                                 style={
                                                     "width": "30px",
                                                     "height": "30px",
-                                                    "marginRight": "10px", 
+                                                    "marginRight": "10px",
                                                 },
                                             ),
                                             href="https://www.linkedin.com/in/minhbtnguyen/",
                                             target="_blank",
-                                            className="text-dark", 
+                                            className="text-dark",
                                         ),
                                         html.A(
                                             html.Img(
@@ -163,7 +163,7 @@ def card():
                                             ),
                                             href="https://github.com/mnguyen0226",
                                             target="_blank",
-                                            className="text-dark", 
+                                            className="text-dark",
                                         ),
                                     ]
                                 ),

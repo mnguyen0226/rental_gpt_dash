@@ -176,7 +176,7 @@ def right_side():
 
 def query_database(filters):
     con = sqlite3.connect("database.db")
-    
+
     # SQL query based on preference
     query = """
     SELECT * FROM properties

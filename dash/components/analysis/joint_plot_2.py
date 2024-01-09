@@ -32,7 +32,7 @@ scatter_plot = go.Scatter(
     x=df_filtered["price"],
     y=df_filtered["bathrooms"],
     mode="markers",
-    marker=dict(size=5, color=df_filtered["color"]), 
+    marker=dict(size=5, color=df_filtered["color"]),
     name="Scatter Plot",
 )
 
