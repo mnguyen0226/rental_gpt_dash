@@ -45,12 +45,13 @@ docker run -p 5000:8050 your-dockerhub-username/project-name
 8. On the terminal, enable services through GCP terminal: `gcloud services enable
 containerregistry.googleapis.com`.
 9. On the terminal, enable permission via `gcloud auth configure-docker`.
-10. On the terminal, build your docker image via `docker build -f Dockerfile -t
-gcr.io/your-project/test:test .`.
-11. On the terminal, push your docker image via `docker push gcr.io/your-project/test:test`.
-12. On the terminal, deploy your application via `gcloud run deploy dashapp --image
-gcr.io/your-project/test:test`.
-13. Your application has been successfully deployed!
+10. On the terminal, build your docker image via `docker build -f Dockerfile -t test:local .`
+11. On the terminal, run docker image locally via `docker run -p 8080:8080 test:local`
+12. On the terminal, tag the image for GCR via `docker tag test:local gcr.io/rentalgpt/test:test`
+13. On the terminal, push your docker image via `docker push gcr.io/your-project/test:test`.
+14. On the terminal, push the image to GCR via `docker push gcr.io/rentalgpt/test:test`
+15. On the terminal, deploy your application via `gcloud run deploy dashapp --image gcr.io/rentalgpt/test:test --platform managed --region us-east1`.
+16. Your application has been successfully deployed!
 
 ### Deployment on Virginia Tech's Kubernetes Rancher
 1. Consider reading through the Documentation - Cloud Quickstart.
