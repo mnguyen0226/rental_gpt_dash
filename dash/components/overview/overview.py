@@ -79,38 +79,26 @@ def card():
                     dbc.Col(
                         [
                             dbc.Card(
-                                [
-                                    dbc.CardImg(
-                                        src="https://www.investopedia.com/thmb/bfHtdFUQrl7jJ_z-utfh8w1TMNA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/houses_and_land-5bfc3326c9e77c0051812eb3.jpg",
-                                        top=True,
-                                        style={
-                                            "opacity": 0.18,
-                                            "height": "200px",
-                                        },
-                                    ),
-                                    dbc.CardImgOverlay(
-                                        dbc.CardBody(
-                                            [
-                                                html.Div(
-                                                    style={"height": "100px"},
-                                                    children=[
-                                                        html.H4(
-                                                            "New York City Apartments Listing",
-                                                            className="card-title text-center",  # apply text-center class
-                                                        ),
-                                                    ],
-                                                ),
-                                                dbc.Button(
-                                                    "Explore",
-                                                    color="dark",
-                                                    href="https://rentalgpt.discovery.cs.vt.edu/listing",
-                                                    className="mx-auto d-block",  # center the button horizontally
+                                dbc.CardBody(
+                                    [
+                                        html.Div(
+                                            style={"height": "100px"},
+                                            children=[
+                                                html.H4(
+                                                    "New York City Apartments Listing",
+                                                    className="card-title text-center",  # apply text-center class
                                                 ),
                                             ],
-                                            className="text-center",  # center the card body content vertically
                                         ),
-                                    ),
-                                ],
+                                        dbc.Button(
+                                            "Explore",
+                                            color="dark",
+                                            href="https://rentalgpt.discovery.cs.vt.edu/listing",
+                                            className="mx-auto d-block",  # center the button horizontally
+                                        ),
+                                    ],
+                                    className="text-center",  # center the card body content vertically
+                                ),
                                 style={"width": "18rem"},
                             ),
                             html.Br(),
@@ -120,42 +108,26 @@ def card():
                     dbc.Col(
                         [
                             dbc.Card(
-                                [
-                                    dbc.CardImg(
-                                        src="https://cdn.thenewstack.io/media/2023/01/285d68dd-charts-1024x581.jpg",
-                                        top=True,
-                                        style={
-                                            "opacity": 0.18,
-                                            "height": "200px",
-                                        },
-                                    ),
-                                    dbc.CardImgOverlay(
-                                        dbc.CardBody(
-                                            [
-                                                html.Div(
-                                                    style={"height": "100px"},
-                                                    children=[
-                                                        html.H4(
-                                                            "In-depth Data Analysis",
-                                                            className="card-title text-center",  # apply text-center class
-                                                        ),
-                                                    ],
-                                                ),
-                                                # html.P(
-                                                #     "An example of using an image in the background of "
-                                                #     "a card.",
-                                                #     className="card-text",
-                                                # ),
-                                                dbc.Button(
-                                                    "Explore",
-                                                    color="dark",
-                                                    href="https://rentalgpt.discovery.cs.vt.edu/analysis",
-                                                    className="mx-auto d-block",  # center the button horizontally
+                                dbc.CardBody(
+                                    [
+                                        html.Div(
+                                            style={"height": "100px"},
+                                            children=[
+                                                html.H4(
+                                                    "In-depth Data Analysis",
+                                                    className="card-title text-center",  # apply text-center class
                                                 ),
                                             ],
                                         ),
-                                    ),
-                                ],
+                                        dbc.Button(
+                                            "Explore",
+                                            color="dark",
+                                            href="https://rentalgpt.discovery.cs.vt.edu/analysis",
+                                            className="mx-auto d-block",  # center the button horizontally
+                                        ),
+                                    ],
+                                    className="text-center",
+                                ),
                                 style={"width": "18rem"},
                             ),
                             html.Br(),
@@ -165,42 +137,26 @@ def card():
                     dbc.Col(
                         [
                             dbc.Card(
-                                [
-                                    dbc.CardImg(
-                                        src="https://media.licdn.com/dms/image/C4D12AQENxlEKXtt4Tw/article-cover_image-shrink_600_2000/0/1588295143025?e=2147483647&v=beta&t=3A_tBd2veQHzontm2NcuQ4lSuxL4lRNMeZJ8vw1MkOc",
-                                        top=True,
-                                        style={
-                                            "opacity": 0.18,
-                                            "height": "200px",
-                                        },
-                                    ),
-                                    dbc.CardImgOverlay(
-                                        dbc.CardBody(
-                                            [
-                                                html.Div(
-                                                    style={"height": "100px"},
-                                                    children=[
-                                                        html.H4(
-                                                            "Interactive Data Visualization",
-                                                            className="card-title text-center",  # apply text-center class
-                                                        ),
-                                                    ],
-                                                ),
-                                                # html.P(
-                                                #     "An example of using an image in the background of "
-                                                #     "a card.",
-                                                #     className="card-text",
-                                                # ),
-                                                dbc.Button(
-                                                    "Explore",
-                                                    color="dark",
-                                                    href="https://rentalgpt.discovery.cs.vt.edu/visualization",
-                                                    className="mx-auto d-block",  # center the button horizontally
+                                dbc.CardBody(
+                                    [
+                                        html.Div(
+                                            style={"height": "100px"},
+                                            children=[
+                                                html.H4(
+                                                    "Interactive Data Visualization",
+                                                    className="card-title text-center",  # apply text-center class
                                                 ),
                                             ],
                                         ),
-                                    ),
-                                ],
+                                        dbc.Button(
+                                            "Explore",
+                                            color="dark",
+                                            href="https://rentalgpt.discovery.cs.vt.edu/visualization",
+                                            className="mx-auto d-block",  # center the button horizontally
+                                        ),
+                                    ],
+                                    className="text-center",
+                                ),
                                 style={"width": "18rem"},
                             ),
                             html.Br(),
@@ -209,42 +165,26 @@ def card():
                     dbc.Col(
                         [
                             dbc.Card(
-                                [
-                                    dbc.CardImg(
-                                        src="https://thehustle.co/wp-content/uploads/2023/02/HS-News-Brief_2023-02-03T015826.025Z.png",
-                                        top=True,
-                                        style={
-                                            "opacity": 0.18,
-                                            "height": "200px",
-                                        },
-                                    ),
-                                    dbc.CardImgOverlay(
-                                        dbc.CardBody(
-                                            [
-                                                html.Div(
-                                                    style={"height": "100px"},
-                                                    children=[
-                                                        html.H4(
-                                                            "Customer's Interest Level Prediction",
-                                                            className="card-title text-center",  # apply text-center class
-                                                        ),
-                                                    ],
-                                                ),
-                                                # html.P(
-                                                #     "An example of using an image in the background of "
-                                                #     "a card.",
-                                                #     className="card-text",
-                                                # ),
-                                                dbc.Button(
-                                                    "Explore",
-                                                    color="dark",
-                                                    href="https://rentalgpt.discovery.cs.vt.edu/interest_level_prediction",
-                                                    className="mx-auto d-block",  # center the button horizontally
+                                dbc.CardBody(
+                                    [
+                                        html.Div(
+                                            style={"height": "100px"},
+                                            children=[
+                                                html.H4(
+                                                    "Customer's Interest Level Prediction",
+                                                    className="card-title text-center",  # apply text-center class
                                                 ),
                                             ],
                                         ),
-                                    ),
-                                ],
+                                        dbc.Button(
+                                            "Explore",
+                                            color="dark",
+                                            href="https://rentalgpt.discovery.cs.vt.edu/interest_level_prediction",
+                                            className="mx-auto d-block",  # center the button horizontally
+                                        ),
+                                    ],
+                                    className="text-center",
+                                ),
                                 style={"width": "18rem"},
                             ),
                         ]
@@ -257,42 +197,26 @@ def card():
                     dbc.Col(
                         [
                             dbc.Card(
-                                [
-                                    dbc.CardImg(
-                                        src="https://www.vantage-ai.com/hubfs/House%20prices.jpg",
-                                        top=True,
-                                        style={
-                                            "opacity": 0.18,
-                                            "height": "200px",
-                                        },
-                                    ),
-                                    dbc.CardImgOverlay(
-                                        dbc.CardBody(
-                                            [
-                                                html.Div(
-                                                    style={"height": "100px"},
-                                                    children=[
-                                                        html.H4(
-                                                            "Monthly Rental Price Prediction",
-                                                            className="card-title text-center",  # apply text-center class
-                                                        ),
-                                                    ],
-                                                ),
-                                                # html.P(
-                                                #     "An example of using an image in the background of "
-                                                #     "a card.",
-                                                #     className="card-text",
-                                                # ),
-                                                dbc.Button(
-                                                    "Explore",
-                                                    color="dark",
-                                                    href="https://rentalgpt.discovery.cs.vt.edu/price_prediction",
-                                                    className="mx-auto d-block",  # center the button horizontally
+                                dbc.CardBody(
+                                    [
+                                        html.Div(
+                                            style={"height": "100px"},
+                                            children=[
+                                                html.H4(
+                                                    "Monthly Rental Price Prediction",
+                                                    className="card-title text-center",  # apply text-center class
                                                 ),
                                             ],
                                         ),
-                                    ),
-                                ],
+                                        dbc.Button(
+                                            "Explore",
+                                            color="dark",
+                                            href="https://rentalgpt.discovery.cs.vt.edu/price_prediction",
+                                            className="mx-auto d-block",  # center the button horizontally
+                                        ),
+                                    ],
+                                    className="text-center",
+                                ),
                                 style={"width": "18rem"},
                             ),
                             html.Br(),
@@ -301,42 +225,26 @@ def card():
                     dbc.Col(
                         [
                             dbc.Card(
-                                [
-                                    dbc.CardImg(
-                                        src="https://huggingface.co/wordcab/llama-natural-instructions-7b/resolve/main/llama-natural-instructions-removebg-preview.png",
-                                        top=True,
-                                        style={
-                                            "opacity": 0.18,
-                                            "height": "200px",
-                                        },
-                                    ),
-                                    dbc.CardImgOverlay(
-                                        dbc.CardBody(
-                                            [
-                                                html.Div(
-                                                    style={"height": "100px"},
-                                                    children=[
-                                                        html.H4(
-                                                            "LLaMA Virtual Assistant",
-                                                            className="card-title text-center",  # apply text-center class
-                                                        ),
-                                                    ],
-                                                ),
-                                                # html.P(
-                                                #     "An example of using an image in the background of "
-                                                #     "a card.",
-                                                #     className="card-text",
-                                                # ),
-                                                dbc.Button(
-                                                    "Explore",
-                                                    color="dark",
-                                                    href="https://rentalgpt.discovery.cs.vt.edu/virtual_assistant",
-                                                    className="mx-auto d-block",  # center the button horizontally
+                                dbc.CardBody(
+                                    [
+                                        html.Div(
+                                            style={"height": "100px"},
+                                            children=[
+                                                html.H4(
+                                                    "LLaMA Virtual Assistant",
+                                                    className="card-title text-center",  # apply text-center class
                                                 ),
                                             ],
                                         ),
-                                    ),
-                                ],
+                                        dbc.Button(
+                                            "Explore",
+                                            color="dark",
+                                            href="https://rentalgpt.discovery.cs.vt.edu/virtual_assistant",
+                                            className="mx-auto d-block",  # center the button horizontally
+                                        ),
+                                    ],
+                                    className="text-center",
+                                ),
                                 style={"width": "18rem"},
                             ),
                         ]
