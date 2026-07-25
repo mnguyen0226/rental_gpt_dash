@@ -1,3 +1,15 @@
 # large datasets
 data/sentimental_extraction_kaggle.csv
 data/sentimental_extraction_kaggle.json
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+__MACOSX/

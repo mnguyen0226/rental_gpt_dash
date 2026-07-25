@@ -7,7 +7,6 @@ patsy
 pipreqs
 statsmodels
 streamlit == 1.23.0
-hugchat==0.3.8
 python-dotenv == 1.0.0
 dash-bootstrap-components==1.4.1
 scikit_learn==1.1.2
