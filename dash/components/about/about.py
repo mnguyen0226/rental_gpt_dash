@@ -114,7 +114,7 @@ def card():
                         [
                             dbc.Col(
                                 dbc.CardImg(
-                                    src="https://raw.githubusercontent.com/mnguyen0226/mnguyen0226.github.io/main/static/profile_images/personal/professional.png",
+                                    src="https://github.com/minhbtnguyen.png",
                                     className="img-fluid rounded-start",
                                 ),
                                 className="col-md-5",
@@ -127,13 +127,11 @@ def card():
                                             className="card-title",
                                         ),
                                         html.P(
-                                            "Research Assistant, "
-                                            "M.Sc. Computer Engineering "
-                                            "at Virginia Tech.",
+                                            "Machine Learning Engineer at BlackRock",
                                             className="card-text",
                                         ),
                                         html.Small(
-                                            "mnguyen0226@vt.edu",
+                                            "minhbtnguyen.work@gmail.com",
                                             className="card-text text-muted",
                                         ),
                                         html.Br(),
@@ -161,7 +159,7 @@ def card():
                                                     "height": "30px",
                                                 },
                                             ),
-                                            href="https://github.com/mnguyen0226",
+                                            href="https://github.com/minhbtnguyen",
                                             target="_blank",
                                             className="text-dark",
                                         ),

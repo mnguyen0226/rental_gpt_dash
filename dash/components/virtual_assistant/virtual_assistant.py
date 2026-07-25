@@ -66,7 +66,7 @@ def virtual_assistant_layout():
                                 id="virtual_assistant_selected_tab",
                                 children=[
                                     dbc.Tab(
-                                        label="LLaMA Chatbot",
+                                        label="LLaMA Chatbot (Deprecated)",
                                         tab_id="hugging_face",
                                     ),
                                     dbc.Tab(

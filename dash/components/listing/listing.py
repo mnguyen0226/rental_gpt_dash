@@ -12,6 +12,10 @@ import pandas as pd
 # file imports
 from maindash import my_app
 
+# matches for broad filters can run into the thousands; rendering one
+# Bootstrap card per row froze the page, so cap how many are displayed
+CARD_DISPLAY_LIMIT = 100
+
 
 #######################################
 # Layout
@@ -248,9 +252,26 @@ def update_content(bathrooms, bedrooms, features, sort_order):
     elif sort_order == "desc":
         filtered_df = filtered_df.sort_values(by="price", ascending=False)
 
+    # cap the number of rendered cards: matches can run into the thousands,
+    # and rendering one Bootstrap card per row froze the page
+    total_matches = len(filtered_df)
+    cards_df = filtered_df.head(CARD_DISPLAY_LIMIT)
+
     # create cards and update map as before
     cards_content = html.Div(
-        create_cards(filtered_df), style={"display": "flex", "flexWrap": "wrap"}
+        [
+            html.P(
+                (
+                    f"Showing {len(cards_df)} of {total_matches} matching listings."
+                    if total_matches > CARD_DISPLAY_LIMIT
+                    else f"Showing {total_matches} matching listings."
+                ),
+                style={"width": "100%"},
+            ),
+            html.Div(
+                create_cards(cards_df), style={"display": "flex", "flexWrap": "wrap"}
+            ),
+        ]
     )
     fig = px.scatter_mapbox(
         filtered_df,
