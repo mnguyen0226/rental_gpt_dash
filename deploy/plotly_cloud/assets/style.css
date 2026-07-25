@@ -1,0 +1,117 @@
+/*
+Reference: https://community.plotly.com/t/sidebar-with-icons-expands-on-hover-and-other-cool-sidebars/67318
+*/
+
+/* this creates a skinny side bar fixed to the left of the page */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 5rem;
+    padding: 2rem 1rem;
+    background-color: #082446;
+    z-index: 1050;
+    transition: width 0.1s ease-in-out;
+  }
+  
+  /* when the user hovers on the sidebar, expand it */
+  .sidebar:hover {
+    width: 16rem;
+  }
+  
+  /* make sure the contents of the navlink don't wrap when navbar collapses */
+  .sidebar .nav-link {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  /* fix the width of the icons */
+  .sidebar .nav-link i {
+    width: 1rem;
+  }
+  
+  /* hide the navlink labels by default */
+  .sidebar .nav-link span {
+    visibility: hidden;
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+  }
+  
+  /* container for the sidebar header. make sure the contents don't wrap when
+   * the sidebar is collapsed.
+   */
+  .sidebar-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  /* position the header relative to the logo and hide by default */
+  .sidebar-header h2 {
+    opacity: 0;
+    margin-left: 1rem;
+    margin-bottom: 0;
+    transition: opacity 0.1s ease-in-out;
+  }
+  
+  /* reveal the header when the sidebar is toggled */
+  .sidebar:hover .sidebar-header h2 {
+    opacity: 1;
+  }
+  
+  /* position the content relative to the collapsed sidebar */
+  .content {
+    margin-left: 7rem;
+    margin-right: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  /* adjust the margin when the sidebar is not hovered */
+  .content {
+    transition: margin-left .1s;
+    padding: 1rem 1rem;
+  }
+
+  /* increase the margin-left of the content when the sidebar is hovered */
+  .sidebar:hover ~ .content {
+    margin-left: 18rem;
+  }
+
+/* default non-selected nav link styles */
+.sidebar .nav-link {
+  background-color: #082446; /* dark background for non-selected */
+  color: #ffffff; /* white text for non-selected */
+}
+
+/* hover and focus styles for non-selected nav links */
+.sidebar .nav-link:hover, .sidebar .nav-link:focus {
+  background-color: #ffffff; /* white background on hover/focus */
+  color: #082446; /* dark text on hover/focus */
+}
+
+/* active (selected) nav link styles */
+.sidebar .nav-link.active, .sidebar .nav-link.active:focus {
+  background-color: #ffffff; /* white background for selected */
+  color: #082446; /* dark text for selected */
+}
+
+/* ensure icons and text inside nav links follow the same color rules */
+.sidebar .nav-link i, .sidebar .nav-link span {
+  color: inherit; /* this ensures the text color is the same as the .nav-link */
+}
+
+/* for better UX, ensure that the hover/focus effects apply to entire nav-link content */
+.sidebar .nav-link:hover i, .sidebar .nav-link:hover span,
+.sidebar .nav-link:focus i, .sidebar .nav-link:focus span {
+  color: inherit; /* maintain the same color on hover/focus */
+}
+
+/* when the sidebar is hovered, reveal the labels */
+.sidebar:hover .nav-link span {
+  visibility: visible;
+  opacity: 1;
+}

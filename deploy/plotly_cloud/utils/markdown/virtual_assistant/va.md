@@ -1,0 +1,3 @@
+The general idea of the virtual assistant is that the LLM will learned the provided [apartment rental dataset](https://www.kaggle.com/competitions/two-sigma-connect-rental-listing-inquiries/data?select=train.json.zip) to understand the context of the application. Through the conversation with the user, the LLM will make a prediction on the features of the preferred apartment (such as number of bedrooms, bathrooms, etc...) which will allow it to filter and give the top 5 recommended apartment to the user.
+
+This sub-project is in progress...🧑‍💻 Stay tune!
